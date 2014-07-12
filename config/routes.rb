@@ -1,4 +1,11 @@
 Marble::Application.routes.draw do
+  get "makrana_marble/white_marble"
+  get "makrana_marble/albeta_marble"
+  get "makrana_marble/dungri_marble"
+  get "makrana_marble/makrana_kumari"
+  get "makrana_marble/mateveri_kumari"
+  get "makrana_marble/kumari"
+  get "makrana_marble/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
