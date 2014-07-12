@@ -19,7 +19,7 @@
 body {
 	background: url(/body-bg.png) repeat;
 	color: #86786f;
-	font-family:Verdana,Arial;
+	font-size: 14px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6{
