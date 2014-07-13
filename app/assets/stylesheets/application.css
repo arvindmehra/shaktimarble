@@ -17,17 +17,11 @@
 @import "bootstrap";
 
 body {
-	background: url(/body-bg.png) repeat;
-	color: #86786f;
 	font-size: 14px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6{
-	font-family: 'droid_serif', serif;
-}
 
 .bg-white{
-	background-color: #fff;
 	margin: 30px 0px;
 }
 
@@ -40,4 +34,25 @@ padding: 14px 0;
 background-color: #DCD8D5;
 box-shadow: 0px 3px 4px #c5beb9;
 margin: 14px 0px;
+}
+
+.footer {
+  height: 100px;
+  background: #154A63;
+  color: #fff;
+}
+
+.header {
+  background: #5EAB1F;
+  color:#fff;
+}
+.header a {
+  color: #fff;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: #569C1C;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+background-color: #569C1C;
 }

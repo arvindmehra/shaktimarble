@@ -7,10 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 	<body>
+		<div class="row header" style="margin-bottom:20px;">
+		  <div class="container">
+		    <div class="row">
+		      <div class="col-md-5">
+		        <h4 style="padding-top:5px;">Shakti Marble</h4>
+		      </div>
+		      <div class="col-md-6">
+		        <ul class="nav navbar-nav navbar-right">
+		          <li><%= link_to "Home",root_path %></li>
+		          <li><a href="#">About</a></li>
+		          <li class="dropdown">
+		            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Product <b class="caret"></b></a>
+		            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+		              <li role="presentation"><%= link_to("MAKRANA MARBLE",makrana_marble_index_path) %></li>
+		              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">OTHER THAN MAKRANA MARBLE</a></li>
+		              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">GRANITE</a></li>
+		              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">IMPORTED MARBLE</a></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		<div class="container">
-		  <div class="row">
 				<%= yield %>
-			</div>
+		</div>
+		<div class="row footer">
+		 	<div class="container">
+		 		<span class="pull-right"><h6>© 2009-2014 ShaktiMarble. All rights reserved.</h6></span>
+		 	</div>
 		</div>
 	</body>
 </html>
