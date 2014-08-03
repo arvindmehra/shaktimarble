@@ -1,0 +1,21 @@
+<h2>Marble Products</h2>
+
+<div class="span7 popular_products">
+    <ul class="thumbnails list-unstyled">
+      <% @marble_products.each do |marble_product| %>
+        <li class="col-md-5">
+          <div class="thumbnail">
+            <span><%= image_tag marble_product.product_pics_url.to_s, :width=>435,:height=>500 %></span>
+            <div class="productPicBoxText">
+              <span><%= marble_product.name %></span>
+              <% if marble_product.price.present? %>
+                <span style="float:right">Price <%= marble_product.price %></span><br><br>
+              <% end %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+<%= link_to 'New Marble product', new_marble_product_path %>

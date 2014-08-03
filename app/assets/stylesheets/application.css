@@ -56,3 +56,14 @@ margin: 14px 0px;
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
 background-color: #569C1C;
 }
+
+.productPicBoxText>span, .grey {
+display: inline;
+float: left;
+font-family: 'Clarendon-Bold';
+font-weight: bold;
+-webkit-font-smoothing: antialiased;
+color: #F47AB2;
+font-size: 16px;
+margin: 0;
+padding: 10px;}
