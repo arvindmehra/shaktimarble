@@ -1,4 +1,7 @@
 Marble::Application.routes.draw do
+  resources :marble_products
+
+  get "home/index"
   get "makrana_marble/white_marble"
   get "makrana_marble/albeta_marble"
   get "makrana_marble/dungri_marble"

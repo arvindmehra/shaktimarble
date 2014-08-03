@@ -7,8 +7,18 @@ ruby '2.1.1'
 # Use mysql2 as the database for Active Record
 gem 'mysql2'
 gem 'bootstrap-sass'
+gem 'carrierwave'
+gem 'thin'
+
+gem 'byebug'
 
 # Use SCSS for stylesheets
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -1,0 +1,29 @@
+<%= form_for(@marble_product , :html => {:multipart => true}) do |f| %>
+  <% if @marble_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@marble_product.errors.count, "error") %> prohibited this marble_product from being saved:</h2>
+
+      <ul>
+      <% @marble_product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :product_pics %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
