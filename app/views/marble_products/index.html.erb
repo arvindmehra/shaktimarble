@@ -5,7 +5,7 @@
       <% @marble_products.each do |marble_product| %>
         <li class="col-md-5">
           <div class="thumbnail">
-            <span><%= image_tag marble_product.product_pics_url.to_s, :width=>435,:height=>500 %></span>
+            <span><%= image_tag marble_product.product_pics_url.to_s, :width=>435,:height=>740 %></span>
             <div class="productPicBoxText">
               <span><%= marble_product.name %></span>
               <% if marble_product.price.present? %>
