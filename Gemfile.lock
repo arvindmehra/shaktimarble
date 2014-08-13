@@ -61,6 +61,8 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     dropbox-sdk (1.6.4)
       json
     erubis (2.7.0)
@@ -162,7 +164,7 @@ DEPENDENCIES
   carrierwave
   carrierwave-dropbox
   coffee-rails (~> 4.0.0)
-  dotenv
+  dotenv-rails
   jbuilder (~> 1.2)
   jquery-rails
   meta_request

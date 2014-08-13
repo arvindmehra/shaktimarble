@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802215305) do
+ActiveRecord::Schema.define(version: 20140813071007) do
+
+  create_table "granites", force: true do |t|
+    t.string   "name"
+    t.string   "price"
+    t.string   "granite_pics"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "marble_products", force: true do |t|
     t.string   "index"

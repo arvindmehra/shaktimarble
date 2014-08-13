@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @granite.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @granite.price %>
+</p>
+
+<p>
+  <strong>Granite pics:</strong>
+  <%= @granite.granite_pics %>
+</p>
+
+<%= link_to 'Edit', edit_granite_path(@granite) %> |
+<%= link_to 'Back', granites_path %>
