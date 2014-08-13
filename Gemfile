@@ -9,8 +9,11 @@ gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'thin'
+gem 'dotenv'
 
 gem 'byebug'
+
+gem 'carrierwave-dropbox'
 
 # Use SCSS for stylesheets
 
