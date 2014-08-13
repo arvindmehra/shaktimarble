@@ -9,10 +9,10 @@ gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'thin'
-gem 'dotenv'
 
 gem 'byebug'
 
+#upload files to dropbox
 gem 'carrierwave-dropbox'
 
 # Use SCSS for stylesheets
@@ -21,6 +21,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  #for env files
+  gem 'dotenv-rails'
 end
 
 # Use Uglifier as compressor for JavaScript assets

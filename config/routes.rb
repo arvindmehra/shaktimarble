@@ -1,4 +1,6 @@
 Marble::Application.routes.draw do
+  resources :granites
+
   resources :marble_products
 
   get "home/index"
