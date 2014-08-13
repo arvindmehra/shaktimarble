@@ -28,7 +28,7 @@ class GranitesController < ApplicationController
 
     respond_to do |format|
       if @granite.save
-        format.html { redirect_to granite_products_url, notice: 'Granite was successfully created.' }
+        format.html { redirect_to granites_url, notice: 'Granite was successfully created.' }
       else
         format.html { render action: 'new' }
         format.json { render json: @granite.errors, status: :unprocessable_entity }
