@@ -1,29 +1,53 @@
 <div class="col-sm-12">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12" style="margin-left:20px"><h3>Makrana Marble</h3></div>
+      <h3>Makrana Marble</h3>
+      <div class="row">
+      <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("/bannermarble1.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble2.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble3.png") %>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-        <div class="col-md-6"><img src="/taj.png"></div>
-        <div class="col-md-12">
+        <!-- <div class="col-md-12"> -->
+          <p>
+            The best quality of marble in world
+            The oldest and the best quality marble in the world. It not need chemical reinforcement like italian marble, no pin holes, no color change and no loss of polish. This is practically verified by the buildings and numerous temples, mosques, churches and m0onuments in india for over 1000 year now. Thus life of next seven genration is guarantied. This marble is also knows as milky white marble.
+          </p>
+
           <h4>Categories</h4>
           <ul>
-            <li style="text-align: justify;"><%= link_to("WHITE MARBLE",makrana_marble_white_marble_path) %></li>
+            <li style="text-align: justify;"><%= link_to("WHITE MARBLE",white_marble_makrana_marble_index_path) %></li>
 
-            <li style="text-align: justify;"><%= link_to("ALBETA MARBLE",makrana_marble_albeta_marble_path) %></li>
+            <li style="text-align: justify;"><%= link_to("ALBETA MARBLE",albeta_marble_makrana_marble_index_path) %></li>
 
-            <li style="text-align: justify;"><%= link_to("DUNGRI MARBLE",makrana_marble_dungri_marble_path) %></li>
+            <li style="text-align: justify;"><%= link_to("DUNGRI MARBLE",dungri_marble_makrana_marble_index_path) %></li>
 
             <li style="text-align: justify;"><a href="#">MAKRANA KUMARI</a></li>
 
             <li style="text-align: justify;"><a href="#">MATAVER KUMARI</a></li>
 
-            <li style="text-align: justify;"><%= link_to("KUMARI MARBLE",makrana_marble_kumari_path) %></li>
+            <li style="text-align: justify;"><%= link_to("KUMARI MARBLE",kumari_makrana_marble_index_path) %></li>
           </ul>
-          <p>
-            The best quality of marble in world 
-            The oldest and the best quality marble in the world. It not need chemical reinforcement like italian marble, no pin holes, no color change and no loss of polish. This is practically verified by the buildings and numerous temples, mosques, churches and m0onuments in india for over 1000 year now. Thus life of next seven genration is guarantied. This marble is also knows as milky white marble.
-          </p>
-        </div>
+        <!-- </div> -->
       </div>
       <div class="col-md-4">
         <div class="panel panel-primary">

@@ -3,14 +3,20 @@ Marble::Application.routes.draw do
 
   resources :marble_products
 
+  #resources :makrana_marble
+  resources :makrana_marble, :except => [:show] do
+    collection do
+      get :white_marble
+      get :albeta_marble
+      get :dungri_marble
+      get :makrana_kumari
+      get :mateveri_kumari
+      get :kumari
+    end
+  end
+
+
   get "home/index"
-  get "makrana_marble/white_marble"
-  get "makrana_marble/albeta_marble"
-  get "makrana_marble/dungri_marble"
-  get "makrana_marble/makrana_kumari"
-  get "makrana_marble/mateveri_kumari"
-  get "makrana_marble/kumari"
-  get "makrana_marble/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

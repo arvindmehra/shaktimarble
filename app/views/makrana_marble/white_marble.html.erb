@@ -1,9 +1,32 @@
 <div class="col-sm-12">
   <div class="container">
+    <h3>White Marble</h3>
     <div class="row">
-      <div class="col-md-12" style="margin-left:20px"><h3>White Marble</h3></div>
+    	<div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("/bannermarble1.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble2.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble3.png") %>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-        <div class="col-md-6"><img src="/whitemarble.png"></div>
 	      <div class="col-md-12">
 	        <h4>Categories</h4>
 	        <ul>
@@ -20,11 +43,12 @@
 	          <b>Second grade makrana </b> white marble is less white than first grade white marble.And the price range of second grade makrana white marble is 400-700 per square feet.
 	        </p>
 	        <p>
-	          <b>Third Grade Makrana</b> White marble is less white than second  
+	          <b>Third Grade Makrana</b> White marble is less white than second
 	grade white marble.And the price range of second grade makrana white marble is 150-400 per square feet.
 	        </p>
 
 	      </div>
+	      <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
     	</div>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">
