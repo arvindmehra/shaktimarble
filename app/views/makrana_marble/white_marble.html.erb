@@ -1,6 +1,5 @@
 <div class="col-sm-12">
   <div class="container">
-    <h3>White Marble</h3>
     <div class="row">
     	<div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
         <ol class="carousel-indicators">
@@ -19,23 +18,18 @@
             <%= image_tag("/bannermarble3.png") %>
           </div>
         </div>
-        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
       </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-	      <div class="col-md-12">
-	        <h4>Categories</h4>
-	        <ul>
-	          <li style="text-align: justify;">First Grade White Marble</li>
+        <div class="grid">
+          <ol class="categories">
+	          <li><%= link_to("First Grade White Marble","#") %></li>
 
-	          <li style="text-align: justify;">Second Grade White Marble</li>
+	          <li><%= link_to("Second Grade White Marble","#") %></li>
 
-	          <li style="text-align: justify;">Third Grade White Marle</li>
-	        </ul>
+	          <li><%= link_to("Third Grade White Marle","#") %></li>
+        	</ol>
+        </div>
+	        <article>
 	        <p>
 	          <b>First grade white</b> of makrana white marble is very white color marble.And the cost of first grade makrana white marble is 700-2000 per square feet.
 	        </p>
@@ -44,10 +38,9 @@
 	        </p>
 	        <p>
 	          <b>Third Grade Makrana</b> White marble is less white than second
-	grade white marble.And the price range of second grade makrana white marble is 150-400 per square feet.
+								grade white marble.And the price range of second grade makrana white marble is 150-400 per square feet.
 	        </p>
-
-	      </div>
+	        </article>
 	      <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
     	</div>
 		  <div class="col-md-4">
