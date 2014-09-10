@@ -4,7 +4,6 @@ class GranitesController < ApplicationController
   # GET /granites
   # GET /granites.json
   def index
-    jingle
     @granites = Granite.all
   end
 
