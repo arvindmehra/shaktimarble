@@ -1,5 +1,6 @@
 class MakranaMarbleController < ApplicationController
   def white_marble
+    flower
   end
 
   def albeta_marble
@@ -21,6 +22,7 @@ class MakranaMarbleController < ApplicationController
   end
 
   def new
+    flower
     @makrana_marble = MakranaMarble.new
   end
 
