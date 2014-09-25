@@ -29,7 +29,7 @@
 	          <li><%= link_to("Third Grade White Marle","#") %></li>
         	</ol>
         </div>
-	        <article>
+	      <article>
 	        <p>
 	          <b>First grade white</b> of makrana white marble is very white color marble.And the cost of first grade makrana white marble is 700-2000 per square feet.
 	        </p>
@@ -40,7 +40,24 @@
 	          <b>Third Grade Makrana</b> White marble is less white than second
 								grade white marble.And the price range of second grade makrana white marble is 150-400 per square feet.
 	        </p>
-	        </article>
+	        <div class="span7 popular_products">
+				    <ul class="thumbnails list-unstyled">
+				      <% @white_marbles.each do |white_marble| %>
+				        <li class="col-md-6">
+				          <div class="thumbnail">
+				            <span><%= image_tag white_marble.makrana_marble_pics.to_s, :width=>210,:height=>210 %></span>
+				            <div class="productPicBoxText fonter" >
+				              <span><%= white_marble.name %></span>
+				              <% if white_marble.price.present? %>
+				                <span style="float:right">Price <%= white_marble.price %></span>
+				              <% end %>
+				            </div>
+				          </div>
+				        </li>
+				      <% end %>
+				    </ul>
+				  </div>
+	      </article>
 	      <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
     	</div>
 		  <div class="col-md-4">
@@ -48,26 +65,7 @@
 			    <div class="panel-heading">
 			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
 			    </div>
-			    <div class="panel-body">
-			      <form accept-charset="UTF-8" action="/properties/send_query" class="form form-horizontal" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control" id="email" name="email" placeholder="Email" type="text"></div>
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control" id="name" name="name" placeholder="Name" type="text"></div>
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control datetime" id="phone" name="phone" placeholder="Mobile No." type="text"></div>
-			        </div>
-			        <div class="form-actions form-actions-padding-sm">
-			          <div class="row">
-			            <div class="col-md-12">
-			              <input class="pull-right btn btn-warning" id="do_migration" name="commit" type="submit" value="Send Message">
-			            </div>
-			          </div>
-			        </div>
-			      </form>
-			    </div>
+			    <%= render "layouts/query" %>
 		  	</div>
 			</div>
 		</div>

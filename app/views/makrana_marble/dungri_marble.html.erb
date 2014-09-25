@@ -27,59 +27,57 @@
 	          <li><a href="#">Makrana Adanga Tiles</a></li>
 	        </ol>
 	      </div>
-	        <article>
-	        	<h3>Dungri Marble</h3>
-		        <p>
-		          <b>Makrana Dungari Marble</b> is very famous product of makrana city.In Makrana dungari marble the background is white base with black lining. In Makrana Chuk Dungari Marble There are some more white glow with black lining.
-		        </p>
-		        <p>
-		          <b>Makrana Dungri Marble Price/cost </b>:-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
-		        </p>
-		        <p>
-		          <b>Makrana Chuck Dungri Marble</b>  :-In Makrana Chuk Dungari Marble There are some more white glow with black lining.
-		        </p>
-		        <p>
-		          <b>Makrana Chuk Doongri Marble Price </b>:-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
-		        </p>
-		        <p>
-		          <b> Makrana Adanga Tiles </b>:-There are many size in Makrana Dungari Marble/Makrana  Doongri Marble /Makrana Adanga Marble  tiles. Here i defined the size of makrana Adanga marble tiles .Tiles means the length and width of marble is greater than one feet square .In makrana adanga  marble there are nine different sizes such as 24*21 , 24*18 , 24*15 , 24*12 , 18*18 , 15*15 , 12*12 , 18*12 , 18*15 , 21*15 , 21*18 , 15*12 inches .
-		        </p>
-		        <p>
-		          <b>Makrana Adanga Tiles Cost/Price </b>:-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
-		        </p>
-		        <p>
-		          <b>Makrana Variety Marble Cost </b>:-The cost of makrana doongri/Adanga Marble variety is 15-20 rupees per square feet.
-		        </p>
-		        <p>
-		          <b>Makrana Adanga Tiles Cost/Price </b>:-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
-	        	</p>
-	        </article>
+        <article>
+        	<h3>Dungri Marble</h3>
+	        <p>
+	          <b>Makrana Dungari Marble</b> is very famous product of makrana city.In Makrana dungari marble the background is white base with black lining. In Makrana Chuk Dungari Marble There are some more white glow with black lining.
+	        </p>
+	        <p>
+	          <b>Makrana Dungri Marble Price/cost </b>:-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
+	        </p>
+	        <p>
+	          <b>Makrana Chuck Dungri Marble</b>  :-In Makrana Chuk Dungari Marble There are some more white glow with black lining.
+	        </p>
+	        <p>
+	          <b>Makrana Chuk Doongri Marble Price </b>:-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
+	        </p>
+	        <p>
+	          <b> Makrana Adanga Tiles </b>:-There are many size in Makrana Dungari Marble/Makrana  Doongri Marble /Makrana Adanga Marble  tiles. Here i defined the size of makrana Adanga marble tiles .Tiles means the length and width of marble is greater than one feet square .In makrana adanga  marble there are nine different sizes such as 24*21 , 24*18 , 24*15 , 24*12 , 18*18 , 15*15 , 12*12 , 18*12 , 18*15 , 21*15 , 21*18 , 15*12 inches .
+	        </p>
+	        <p>
+	          <b>Makrana Adanga Tiles Cost/Price </b>:-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
+	        </p>
+	        <p>
+	          <b>Makrana Variety Marble Cost </b>:-The cost of makrana doongri/Adanga Marble variety is 15-20 rupees per square feet.
+	        </p>
+	        <p>
+	          <b>Makrana Adanga Tiles Cost/Price </b>:-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
+        	</p>
+        	<div class="span7 popular_products">
+				    <ul class="thumbnails list-unstyled">
+				      <% @dungri_marbles.each do |dungri_marble| %>
+				        <li class="col-md-6">
+				          <div class="thumbnail">
+				            <span><%= image_tag dungri_marble.makrana_marble_pics.to_s, :width=>210,:height=>210 %></span>
+				            <div class="productPicBoxText fonter" >
+				              <span><%= dungri_marble.name %></span>
+				              <% if dungri_marble.price.present? %>
+				                <span style="float:right">Price <%= dungri_marble.price %></span>
+				              <% end %>
+				            </div>
+				          </div>
+				        </li>
+				      <% end %>
+				    </ul>
+				  </div>
+        </article>
 	    </div>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">
 			    <div class="panel-heading">
 			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
 			    </div>
-			    <div class="panel-body">
-			      <form accept-charset="UTF-8" action="/properties/send_query" class="form form-horizontal" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control" id="email" name="email" placeholder="Email" type="text"></div>
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control" id="name" name="name" placeholder="Name" type="text"></div>
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control datetime" id="phone" name="phone" placeholder="Mobile No." type="text"></div>
-			        </div>
-			        <div class="form-actions form-actions-padding-sm">
-			          <div class="row">
-			            <div class="col-md-12">
-			              <input class="pull-right btn btn-warning" id="do_migration" name="commit" type="submit" value="Send Message">
-			            </div>
-			          </div>
-			        </div>
-			      </form>
-			    </div>
+			      <%= render "layouts/query" %>
 			  </div>
 			</div>
 		  <div class="col-md-4">

@@ -1,75 +1,71 @@
 <div class="col-sm-12">
   <div class="container">
     <div class="row">
-      <div class="col-md-12" style="margin-left:20px"><h3>Granite</h3></div>
+      <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("/bannermarble1.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble2.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble3.png") %>
+          </div>
+        </div>
+      </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-        <div class="col-md-6"><img src="/taj.png"></div>
-        <div class="col-md-12">
-          <h4>Categories</h4>
-          <ul>
-            <li style="text-align: justify;">According to mines name</li>
-
-            <li style="text-align: justify;">According to size of crystal</li>
-
-            <li style="text-align: justify;">According to color</li>
-          </ul>
-          <p> In India various verity of granite is available. In this site we categorized the granite according to south zonal granite and north zonal granite mainly Rajasthan granite
+        <div class="grid">
+          <ol class="categories">
+            <li><a href="#">According to mines name</a> </li>
+            <li><a href="#">According to size of crystal</a> </li>
+            <li><a href="#">According to color</a> </li>
+          </ol>
+        </div>
+        <article>
+          <h3 style="margin-top:0px">Granites</h3>
+          <p>
+            In India various verity of granite is available. In this site we categorized the granite according to south zonal granite and north zonal granite mainly Rajasthan granite
           </p>
           <p>
-            Granite is a common type of felsic intrusive igneous rock which is granular and phaneritic in texture. The word "granite" comes from the Latin granum, a grain, in reference to the coarse-grained structure of such a holocrystalline rock. 
+            Granite is a common type of felsic intrusive igneous rock which is granular and phaneritic in texture. The word "granite" comes from the Latin granum, a grain, in reference to the coarse-grained structure of such a holocrystalline rock.
           </p>
+          <div class="span7 popular_products">
+          <ul class="thumbnails list-unstyled">
+            <% @granites.each do |granite| %>
+              <li class="col-md-6">
+                <div class="thumbnail">
+                  <span><%= image_tag granite.granite_pics.to_s, :width=>210,:height=>210 %></span>
+                  <div class="productPicBoxText fonter" >
+                    <span><%= granite.name %></span>
+                    <% if granite.price.present? %>
+                      <span style="float:right">Price <%= granite.price %></span>
+                    <% end %>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
         </div>
+        <%= link_to 'New Granite', new_granite_path %>
+      </article>
       </div>
       <div class="col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
           </div>
-          <div class="panel-body">
-            <form accept-charset="UTF-8" action="/properties/send_query" class="form form-horizontal" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-              <div class="form-group">
-                <div class="col-md-12"><input class="form-control" id="email" name="email" placeholder="Email" type="text"></div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12"><input class="form-control" id="name" name="name" placeholder="Name" type="text"></div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-12"><input class="form-control datetime" id="phone" name="phone" placeholder="Mobile No." type="text"></div>
-              </div>
-              <div class="form-actions form-actions-padding-sm">
-                <div class="row">
-                  <div class="col-md-12">
-                    <input class="pull-right btn btn-warning" id="do_migration" name="commit" type="submit" value="Send Message">
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+            <%= render "layouts/query" %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<h2>Granites</h2>
 
-<div class="span7 popular_products">
-  <ul class="thumbnails list-unstyled">
-    <% @granites.each do |granite| %>
-      <li class="col-md-5">
-        <div class="thumbnail">
-          <span><%= image_tag granite.granite_pics_url.to_s, :width=>435,:height=>740 %></span>
-          <div class="productPicBoxText">
-            <span><%= granite.name %></span>
-            <% if granite.price.present? %>
-              <span style="float:right">Price <%= granite.price %></span><br><br>
-            <% end %>
-          </div>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-<%= link_to 'New Marble product', new_granite_path %>
 

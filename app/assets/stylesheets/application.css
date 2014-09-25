@@ -128,6 +128,10 @@ margin: 0;
 padding: 10px;
 }
 
+.fonter>span {
+  font-size: 13px;
+}
+
 .grid
 {
 float:left;

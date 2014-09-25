@@ -4,7 +4,6 @@ class MarbleProductsController < ApplicationController
   # GET /marble_products
   # GET /marble_products.json
   def index
-    flower
     @marble_products = MarbleProduct.all
   end
 
