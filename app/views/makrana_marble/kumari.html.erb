@@ -20,49 +20,49 @@
         </div>
       </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-	        <div class="grid">
-		        <ol class="categories">
-		          <li><a href="#">Borawar Kumari Marble</a> </li>
-		          <li><a href="#">Makrana Kumari Marble</a></li>
-		        </ul>
-		      </div>
-		      <article>
-		      	<h3>Kumari Marble</h3>
-		        <p>
-		          <b>Borawar kumari</b>   is chipest makrana marble because it is bluish shading
-							It’s price range is 15~40 Rs / sq. feet
-							Name is borawar kumari because mines of these marble found in borawar a town near to makrana (7 km away from makrana station)
-		 				</p>
-		 				<p>
-		          <b>Mataver kumari </b> is higher grade than borawar kumari this kumari marble has white base and small crystal size than borawar kumari Cost is start from 50~100
-						</p>
-					</article>
+        <div class="grid">
+	        <ol class="categories">
+	          <li><a href="#">Borawar Kumari Marble</a> </li>
+	          <li><a href="#">Makrana Kumari Marble</a></li>
+	        </ul>
+	      </div>
+	      <article>
+	      	<h3>Kumari Marble</h3>
+	        <p>
+	          <b>Borawar kumari</b>   is chipest makrana marble because it is bluish shading
+						It’s price range is 15~40 Rs / sq. feet
+						Name is borawar kumari because mines of these marble found in borawar a town near to makrana (7 km away from makrana station)
+	 				</p>
+	 				<p>
+	          <b>Mataver kumari </b> is higher grade than borawar kumari this kumari marble has white base and small crystal size than borawar kumari Cost is start from 50~100
+					</p>
+					<div class="span7 popular_products">
+				    <ul class="thumbnails list-unstyled">
+				      <% @kumari_marbles.each do |kumari_marble| %>
+				        <li class="col-md-6">
+				          <div class="thumbnail">
+				            <span><%= image_tag kumari_marble.makrana_marble_pics.to_s, :width=>210,:height=>210 %></span>
+				            <div class="productPicBoxText fonter" >
+				              <span><%= kumari_marble.name %></span>
+				              <% if kumari_marble.price.present? %>
+				                <span style="float:right">Price <%= kumari_marble.price %></span>
+				              <% end %>
+				            </div>
+				          </div>
+				        </li>
+				      <% end %>
+				    </ul>
+			  </div>
+			</article>
 	    </div>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">
 			    <div class="panel-heading">
 			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
 			    </div>
-			    <div class="panel-body">
-			      <form accept-charset="UTF-8" action="/properties/send_query" class="form form-horizontal" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control" id="email" name="email" placeholder="Email" type="text"></div>
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control" id="name" name="name" placeholder="Name" type="text"></div>
-			        </div>
-			        <div class="form-group">
-			          <div class="col-md-12"><input class="form-control datetime" id="phone" name="phone" placeholder="Mobile No." type="text"></div>
-			        </div>
-			        <div class="form-actions form-actions-padding-sm">
-			          <div class="row">
-			            <div class="col-md-12">
-			              <input class="pull-right btn btn-warning" id="do_migration" name="commit" type="submit" value="Send Message">
-			            </div>
-			          </div>
-			        </div>
-			      </form>
-			    </div>
+			    <%= render "layouts/query" %>
+			  </div>
+			</div>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">
 		      <div class="panel-heading">

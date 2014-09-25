@@ -45,6 +45,17 @@ Marble::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox7237e9fd929349b28022d826269d0042.mailgun.org",
+    :user_name => "postmaster@sandbox7237e9fd929349b28022d826269d0042.mailgun.org",
+    :password => "8e6e7467ce8f681151bb754a2d7a413a"
+  }
+  config.action_mailer.perform_deliveries = true
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 

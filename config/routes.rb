@@ -23,6 +23,12 @@ Marble::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  resources :welcome, :only => [:index] do
+    collection do
+      get :send_email
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

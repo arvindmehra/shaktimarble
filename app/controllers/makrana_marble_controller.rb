@@ -1,12 +1,16 @@
 class MakranaMarbleController < ApplicationController
+
   def white_marble
-    flower
+    @white_marbles = MakranaMarble.white_marble
   end
 
   def albeta_marble
+
+    @albeta_marbles = MakranaMarble.albeta_marble
   end
 
   def dungri_marble
+    @dungri_marbles = MakranaMarble.dungri_marble
   end
 
   def makrana_kumari
@@ -16,13 +20,13 @@ class MakranaMarbleController < ApplicationController
   end
 
   def kumari
+    @kumari_marbles = MakranaMarble.kumari_marble
   end
 
   def index
   end
 
   def new
-    flower
     @makrana_marble = MakranaMarble.new
   end
 
@@ -31,7 +35,7 @@ class MakranaMarbleController < ApplicationController
 
     respond_to do |format|
       if @makrana_marble.save
-        format.html { redirect_to makrana_marbles_url, notice: 'Marble product was successfully created.' }
+        format.html { redirect_to makrana_marble_index_url, notice: 'Marble product was successfully created.' }
       else
         format.html { render action: 'new' }
         format.json { render json: @makrana_marble.errors, status: :unprocessable_entity }
