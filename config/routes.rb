@@ -1,4 +1,5 @@
 Marble::Application.routes.draw do
+  devise_for :admins
   resources :granites
 
   resources :marble_products

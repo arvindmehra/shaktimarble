@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'thin'
+gem 'devise'
 
 gem 'byebug'
 

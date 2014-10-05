@@ -1,5 +1,8 @@
 class MakranaMarbleController < ApplicationController
 
+  before_action :authenticate_admin! , :only => [:edit, :update, :destroy]
+  before_action :set_makrana_marble , :only => [:edit, :update, :destroy]
+
   def white_marble
     @white_marbles = MakranaMarble.white_marble
   end
@@ -24,6 +27,9 @@ class MakranaMarbleController < ApplicationController
   end
 
   def index
+  end
+
+  def edit
   end
 
   def new
@@ -62,7 +68,7 @@ class MakranaMarbleController < ApplicationController
   def destroy
     @makrana_marble.destroy
     respond_to do |format|
-      format.html { redirect_to makrana_marbles_url }
+      format.html { redirect_to makrana_marble_index_url }
       format.json { head :no_content }
     end
   end

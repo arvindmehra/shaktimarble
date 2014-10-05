@@ -9,24 +9,21 @@
         </ol>
         <div class="carousel-inner">
           <div class="item active">
-            <%= image_tag("/bannermarble1.png") %>
+            <%= image_tag("/bannergranite1.jpg") %>
           </div>
           <div class="item">
-            <%= image_tag("/bannermarble2.png") %>
+            <%= image_tag("/bannergranite2.jpg") %>
           </div>
           <div class="item">
-            <%= image_tag("/bannermarble3.png") %>
+            <%= image_tag("/bannergranite3.jpg") %>
+          </div>
+           <div class="item">
+            <%= image_tag("/bannergranite4.jpg") %>
           </div>
         </div>
       </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-        <div class="grid">
-          <ol class="categories">
-            <li><a href="#">According to mines name</a> </li>
-            <li><a href="#">According to size of crystal</a> </li>
-            <li><a href="#">According to color</a> </li>
-          </ol>
-        </div>
+        <%= render "layouts/side_menu" %>
         <article>
           <h3 style="margin-top:0px">Granites</h3>
           <p>
@@ -47,13 +44,20 @@
                       <span style="float:right">Price <%= granite.price %></span>
                     <% end %>
                   </div>
+                  <% if current_admin %>
+                    <div class="productPicBoxText fonter">
+                      <span><%= link_to 'Edit',edit_granite_path(granite) %> </span>
+                    </div>
+                  <% end %>
                 </div>
               </li>
             <% end %>
           </ul>
         </div>
-        <%= link_to 'New Granite', new_granite_path %>
       </article>
+      <% if current_admin %>
+        <%= link_to 'New Granite', new_granite_path %>
+      <% end %>
       </div>
       <div class="col-md-4">
         <div class="panel panel-primary">
