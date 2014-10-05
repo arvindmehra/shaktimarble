@@ -20,16 +20,9 @@
         </div>
       </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-        <div class="grid">
-          <ol class="categories">
-	          <li><%= link_to("First Grade White Marble","#") %></li>
-
-	          <li><%= link_to("Second Grade White Marble","#") %></li>
-
-	          <li><%= link_to("Third Grade White Marle","#") %></li>
-        	</ol>
-        </div>
+        <%= render "layouts/side_menu" %>
 	      <article>
+	      	<h3>White Marble</h3>
 	        <p>
 	          <b>First grade white</b> of makrana white marble is very white color marble.And the cost of first grade makrana white marble is 700-2000 per square feet.
 	        </p>
@@ -53,12 +46,19 @@
 				              <% end %>
 				            </div>
 				          </div>
+				          <% if current_admin %>
+			            	<div class="productPicBoxText fonter">
+			            		<span><%= link_to 'Edit',edit_makrana_marble_path(white_marble) %> </span>
+			            	</div>
+			            <% end %>
 				        </li>
 				      <% end %>
 				    </ul>
 				  </div>
 	      </article>
-	      <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
+	      <% if current_admin %>
+	      	<%= link_to 'New Makrana Marble', new_makrana_marble_path %>
+	      <% end %>
     	</div>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">

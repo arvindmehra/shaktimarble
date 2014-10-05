@@ -20,27 +20,15 @@
         </div>
       </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
-          <div class="grid">
-            <ol class="categories">
-              <li><%= link_to("WHITE MARBLE",white_marble_makrana_marble_index_path) %></li>
-
-              <li><%= link_to("ALBETA MARBLE",albeta_marble_makrana_marble_index_path) %></li>
-
-              <li><%= link_to("DUNGRI MARBLE",dungri_marble_makrana_marble_index_path) %></li>
-
-              <li><a href="#">MAKRANA KUMARI</a></li>
-
-              <li><a href="#">MATAVER KUMARI</a></li>
-
-              <li><%= link_to("KUMARI MARBLE",kumari_makrana_marble_index_path) %></li>
-            </ul>
-          </div>
+         <%= render "layouts/side_menu" %>
           <article>
             <h4>Makrana Marble</h4>
             The best quality of marble in world
             The oldest and the best quality marble in the world. It not need chemical reinforcement like italian marble, no pin holes, no color change and no loss of polish. This is practically verified by the buildings and numerous temples, mosques, churches and m0onuments in india for over 1000 year now. Thus life of next seven genration is guarantied. This marble is also knows as milky white marble.
           </article>
-          <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
+          <% if current_admin %>
+              <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
+          <% end %>
       </div>
       <div class="col-md-4">
         <div class="panel panel-primary">

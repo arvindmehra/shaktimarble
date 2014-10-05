@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @makrana_marble %> |
-<%#= link_to 'Back', makrana_marble_path %>
+<%#= link_to 'Back', makrana_marble_path %> |
+
+
+<%= link_to 'Destroy', makrana_marble_path(params[:id]), method: :delete, data: { confirm: 'Are you sure?' } %>

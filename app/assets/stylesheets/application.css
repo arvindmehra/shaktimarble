@@ -64,7 +64,7 @@ text-transform:uppercase;
 font-size:12px;
 font-weight:200;
 color:#fff;
-height:55px; width:250px;
+height:55px;
 border-bottom-left-radius:15px;
 -webkit-border-bottom-left-radius:15px;
 -moz-border-bottom-left-radius:15px;
@@ -153,6 +153,7 @@ background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #f4
 filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f4f4f4'); /* IE6,IE7 */
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f4f4f4')"; /* IE8 */
 margin-bottom:3px;
+padding-left: 0px;
 }
 
 .categories li
@@ -170,7 +171,6 @@ border-top:none;
 {
 font-size:14px;
 padding:10px 10px 10px 15px;
-color:#D52409;
 }
 
 .categories li:last-child
@@ -257,7 +257,23 @@ margin-left: 15px;
   background: url(/rip-topmid.png) repeat-x;
 }
 
+.popup_login {
+  width: auto;
+  padding: 10px;
+}
 
+.popup_login input {
+  margin: 10px;
+}
+
+.popup_login h3 {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.list-group-item-white {
+  background-color: #fff;
+}
 
 
 

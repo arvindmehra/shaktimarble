@@ -1,0 +1,77 @@
+<% if params[:controller] == 'makrana_marble' %>
+  <% marbleclass='active' %>
+  <% marblecollapse = "in" %>
+<% elsif params[:controller] == 'granites' %>
+  <% graniteclass='active' %>
+  <% granitecollapse = "in" %>
+<% elsif params[:controller] == 'marble_products' %>
+  <% marble_productclass='active' %>
+  <% marble_productcollapse = "in" %>
+<% end %>
+
+<div class="panel-group grid" id="accordion">
+  <div class="panel panel-default">
+    <h4 class="panel-title">
+      <ul class="categories">
+        <li><%= link_to "Makrana Marble","#collapseOne", "data-toggle"=>"collapse","data-parent"=>"#accordion",:class=>"#{marbleclass}" %></li>
+      </ul>
+    </h4>
+    <div id="collapseOne" class="panel-collapse collapse <%="#{marblecollapse}"%>">
+      <ul class="list-group" style="margin-bottom:0px;">
+        <li class="list-group-item list-group-item-white"><%= link_to("Makrana Marble",makrana_marble_index_path) %></li>
+        <li class="list-group-item list-group-item-white"><%= link_to("WHITE MARBLE",white_marble_makrana_marble_index_path) %></li>
+        <li class="list-group-item list-group-item-white"><%= link_to("ALBETA MARBLE",albeta_marble_makrana_marble_index_path) %></li>
+        <li class="list-group-item list-group-item-white"><%= link_to("DUNGRI MARBLE",dungri_marble_makrana_marble_index_path) %></li>
+        <li class="list-group-item list-group-item-white"><%= link_to("KUMARI MARBLE",kumari_makrana_marble_index_path) %></li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <h4 class="panel-title">
+      <ul class="categories">
+        <li><%= link_to "Granite","#collapseTwo", "data-toggle"=>"collapse","data-parent"=>"#accordion",:class=>"#{graniteclass}" %></li>
+      </ul>
+    </h4>
+    <div id="collapseTwo" class="panel-collapse collapse <%="#{granitecollapse}"%>">
+      <ul class="list-group" style="margin-bottom:0px;">
+        <li class="list-group-item list-group-item-white"><%= link_to("Granite",granites_path,:class=>"active") %></li>
+        <li class="list-group-item list-group-item-white"><a href="#">North Area</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">South Area</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <h4 class="panel-title">
+      <ul class="categories">
+        <li><%= link_to "Kishangarh Marble","#collapseThree", "data-toggle"=>"collapse","data-parent"=>"#accordion" %>
+        </li>
+      </ul>
+    </h4>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <ul class="list-group" style="margin-bottom:0px;">
+        <li class="list-group-item list-group-item-white"><a href="#">Kishangarh</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Morwad</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Toronto</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Aarna</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Dharmeta</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <h4 class="panel-title">
+      <ul class="categories">
+        <li><%= link_to "Marble Products","#collapseFour", "data-toggle"=>"collapse","data-parent"=>"#accordion",:class=>"#{marble_productclass}" %>
+        </li>
+      </ul>
+    </h4>
+    <div id="collapseFour" class="panel-collapse collapse <%="#{marble_productcollapse}"%>">
+      <ul class="list-group" style="margin-bottom:0px;">
+        <li class="list-group-item list-group-item-white"><%= link_to("Products", marble_products_path)  %></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Flooring and Design</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Statue</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Temple</a></li>
+        <li class="list-group-item list-group-item-white"><a href="#">Accessories</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
