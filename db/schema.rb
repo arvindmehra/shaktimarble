@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004172631) do
+ActiveRecord::Schema.define(version: 20141011221220) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -35,6 +35,23 @@ ActiveRecord::Schema.define(version: 20141004172631) do
     t.string   "name"
     t.string   "price"
     t.string   "granite_pics"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "kishangarh_marbles", force: true do |t|
+    t.string   "name"
+    t.string   "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "kishangarh_marble_pics"
+    t.string   "category"
+  end
+
+  create_table "kota_stones", force: true do |t|
+    t.string   "name"
+    t.string   "price"
+    t.string   "kota_stone_pics"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,37 @@
+<div class="col-sm-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8" style="padding-top:15px;">
+        <%= render "layouts/side_menu" %>
+        <article>
+          <h3>Dharmeta Marble</h3>
+          <div class="span7 popular_products">
+          <ul class="thumbnails list-unstyled">
+            <% @dharmeta_marbles.each do |dharmeta_marble| %>
+              <li class="col-md-6">
+                <div class="thumbnail">
+                  <span><%= image_tag dharmeta_marble.kishangarh_marble_pics.to_s, :width=>210,:height=>210 %></span>
+                  <div class="productPicBoxText fonter" >
+                    <span><%= dharmeta_marble.name %></span>
+                    <% if dharmeta_marble.price.present? %>
+                      <span style="float:right">Price <%= dharmeta_marble.price %></span>
+                    <% end %>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
+          </div>
+          <%= render "layouts/query" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
