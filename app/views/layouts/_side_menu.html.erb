@@ -69,7 +69,7 @@
   <div class="panel panel-default">
     <h4 class="panel-title">
       <ul class="categories">
-        <li><%= link_to "Kota Stone","#collapseFour", "data-toggle"=>"collapse","data-parent"=>"#accordion",:class=>"#{kota_stoneclass}" %>
+        <li><%= link_to "Kota Stone", kota_stones_path ,:class=>"#{kota_stoneclass}" %>
         </li>
       </ul>
     </h4>
@@ -77,11 +77,11 @@
   <div class="panel panel-default">
     <h4 class="panel-title">
       <ul class="categories">
-        <li><%= link_to "Marble Products","#collapseFive", "data-toggle"=>"collapse","data-parent"=>"#accordion",:class=>"#{marble_productclass}" %>
+        <li><%= link_to "Marble Products","#collapseFour", "data-toggle"=>"collapse","data-parent"=>"#accordion",:class=>"#{marble_productclass}" %>
         </li>
       </ul>
     </h4>
-    <div id="collapseFive" class="panel-collapse collapse <%="#{marble_productcollapse}"%>">
+    <div id="collapseFour" class="panel-collapse collapse <%="#{marble_productcollapse}"%>">
       <ul class="list-group" style="margin-bottom:0px;">
         <li class="list-group-item list-group-item-white"><%= link_to("Products", marble_products_path)  %></li>
         <li class="list-group-item list-group-item-white"><a href="#">Flooring and Design</a></li>
