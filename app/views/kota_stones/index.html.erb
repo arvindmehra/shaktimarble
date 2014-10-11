@@ -1,0 +1,62 @@
+<div class="col-sm-12">
+  <div class="container">
+      <div class="row">
+      <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("/bannermarble1.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble2.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble3.png") %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+         <%= render "layouts/side_menu" %>
+          <article>
+            <h4>Kota Stone</h4>
+            Kota stone is a fine- grained variety of lime stone, quarried at Kota district rajasthan india.
+            <br>
+            <br>
+            The rich greenish-blue and brown colours of this stone are most popular. It is an excellent building stone. It is mainly used for exteriors, pathways, corridors, driveways, balconies, commercial buildings etc.
+            <div class="span7 popular_products">
+            <ul class="thumbnails list-unstyled">
+              <% @kota_stones.each do |kota_stone| %>
+                <li class="col-md-6">
+                  <div class="thumbnail">
+                    <span><%= image_tag kota_stone.kota_stone_pics.to_s, :width=>210,:height=>210 %></span>
+                    <div class="productPicBoxText fonter" >
+                      <span><%= kota_stone.name %></span>
+                      <% if kota_stone.price.present? %>
+                        <span style="float:right">Price <%= kota_stone.price %></span>
+                      <% end %>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          </article>
+          <% if current_admin %>
+              <%= link_to 'New Kota Stone', new_kota_stone_path %>
+          <% end %>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
+          </div>
+          <%= render "layouts/query" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

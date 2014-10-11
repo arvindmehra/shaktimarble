@@ -1,4 +1,19 @@
 Marble::Application.routes.draw do
+
+  resources :kota_stones
+
+  resources :kishangarh_marbles do
+    collection do
+      get :morwad_marble
+      get :aarna
+      get :dharmeta
+      get :toronto
+      get :katni
+      get :sawar_marble
+      get :pink_marble
+    end
+  end
+
   devise_for :admins
   resources :granites
 

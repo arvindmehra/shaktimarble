@@ -1,0 +1,29 @@
+<%= form_for(@kota_stone) do |f| %>
+  <% if @kota_stone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kota_stone.errors.count, "error") %> prohibited this kota_stone from being saved:</h2>
+
+      <ul>
+      <% @kota_stone.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :makrana_marble_pics %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
