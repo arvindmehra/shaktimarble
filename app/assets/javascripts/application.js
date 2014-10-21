@@ -15,5 +15,4 @@
 //= require jquery.min
 //= require turbolinks
 //= require bootstrap
-//= require jquery.lettering
 //= require_tree .
