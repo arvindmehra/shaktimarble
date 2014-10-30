@@ -44,6 +44,11 @@
 				              <% end %>
 				            </div>
 				          </div>
+                  <% if current_admin %>
+                    <div class="productPicBoxText fonter">
+                      <span><%= link_to 'Edit',edit_makrana_marble_path(kumari_marble) %> </span>
+                    </div>
+                  <% end %>
 				        </li>
 				      <% end %>
 				    </ul>

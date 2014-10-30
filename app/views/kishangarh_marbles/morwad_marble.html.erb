@@ -10,7 +10,7 @@
             <% @morwad_marbles.each do |morwad_marble| %>
               <li class="col-md-6">
                 <div class="thumbnail">
-                  <span><%= image_tag morwad_marble.kishangargh_marble_pics.to_s, :width=>210,:height=>210 %></span>
+                  <span><%= image_tag morwad_marble.kishangarh_marble_pics.to_s, :width=>210,:height=>210 %></span>
                   <div class="productPicBoxText fonter" >
                     <span><%= morwad_marble.name %></span>
                     <% if morwad_marble.price.present? %>
@@ -18,6 +18,11 @@
                     <% end %>
                   </div>
                 </div>
+                <% if current_admin %>
+                  <div class="productPicBoxText fonter">
+                    <span><%= link_to 'Edit',edit_kishangarh_marble_path(morwad_marble) %> </span>
+                  </div>
+                <% end %>
               </li>
             <% end %>
           </ul>

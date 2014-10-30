@@ -1,0 +1,47 @@
+<div class="col-sm-12">
+  <div class="container">
+      <div class="row">
+      <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("/bannermarble1.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble2.png") %>
+          </div>
+          <div class="item">
+            <%= image_tag("/bannermarble3.png") %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+         <%= render "layouts/side_menu" %>
+          <article class="contact_box">
+              <h3>Contact Us</h4>
+
+              <span style="font: 22px Arial, Helvetica, sans-serif;color: #F14D05;float: left;padding: 5px;width:100%;">Dinesh Charkha</span>
+              <span style="font: 16px Arial, Helvetica, sans-serif;color: #428bca;float: left;padding: 5px;">C/O Shakti Marble, Makrana Road, Borawar Nagaur  Rajasthan</span>
+
+              <span style="font: 22px Arial, Helvetica, sans-serif;color: #F14D05;float: left;padding: 5px;width:100%;">Email</span>
+              <span style="font: 16px Arial, Helvetica, sans-serif;color: #428bca;float: left;padding: 5px;">dinesh@shaktimarble.com</span>
+
+              <span style="font: 22px Arial, Helvetica, sans-serif;color: #F14D05;float: left;padding: 5px;width:100%;">Phone</span>
+              <span style="font: 16px Arial, Helvetica, sans-serif;color: #428bca;float: left;padding: 5px;">9413680420</span>
+          </article>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
+          </div>
+          <%= render "layouts/query" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

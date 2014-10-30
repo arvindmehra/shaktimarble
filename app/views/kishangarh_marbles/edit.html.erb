@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @kishangarh_marble %> |
-<%= link_to 'Back', kishangarh_marbles_path %>
+<%#= link_to 'Back', makrana_marble_path %>
+
+<%= link_to 'Destroy', kishangarh_marble_path(params[:id]), method: :delete, data: { confirm: 'Are you sure?' } %>
+
