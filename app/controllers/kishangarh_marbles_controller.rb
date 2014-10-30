@@ -98,6 +98,6 @@ class KishangarhMarblesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kishangarh_marble_params
-      params.require(:kishangarh_marble).permit(:name, :price)
+      params.require(:kishangarh_marble).permit(:name, :price,:kishangarh_marble_pics,:category)
     end
 end

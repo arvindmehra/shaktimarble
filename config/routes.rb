@@ -42,6 +42,7 @@ Marble::Application.routes.draw do
   resources :welcome, :only => [:index] do
     collection do
       get :send_email
+      get :contact
     end
   end
 
