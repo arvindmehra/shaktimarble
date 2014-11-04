@@ -8,7 +8,6 @@ class MakranaMarbleController < ApplicationController
   end
 
   def albeta_marble
-
     @albeta_marbles = MakranaMarble.albeta_marble
   end
 

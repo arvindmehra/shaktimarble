@@ -249,6 +249,17 @@ width: 500px;
 margin-left: 15px;
 }
 
+.para {
+background: #4587a1;
+padding: 50px 10px 10px 15px;
+color: white;
+letter-spacing: .1em;
+}
+
+.para h4 {
+letter-spacing: .2em;
+}
+
 .zigzag {
   float: left;
   height: 11px;

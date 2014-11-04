@@ -15,7 +15,12 @@ Marble::Application.routes.draw do
   end
 
   devise_for :admins
-  resources :granites
+  resources :granites do
+    collection do
+      get :north
+      get :south
+    end
+  end
 
   resources :marble_products
 
