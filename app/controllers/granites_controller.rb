@@ -7,6 +7,14 @@ class GranitesController < ApplicationController
     @granites = Granite.all
   end
 
+  def north
+    @north_area = Granite.north_area
+  end
+
+  def south
+    @south_area = Granite.south_area
+  end
+
   # GET /granites/1
   # GET /granites/1.json
   def show
@@ -68,6 +76,6 @@ class GranitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def granite_params
-      params.require(:granite).permit(:name, :price, :granite_pics)
+      params.require(:granite).permit(:name, :price, :granite_pics,:category)
     end
 end

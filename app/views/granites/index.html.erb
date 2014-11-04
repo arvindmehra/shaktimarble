@@ -24,7 +24,7 @@
       </div>
       <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
         <%= render "layouts/side_menu" %>
-        <article>
+        <article class="para">
           <h3 style="margin-top:0px">Granites</h3>
           <p>
             In India various verity of granite is available. In this site we categorized the granite according to south zonal granite and north zonal granite mainly Rajasthan granite
@@ -32,28 +32,6 @@
           <p>
             Granite is a common type of felsic intrusive igneous rock which is granular and phaneritic in texture. The word "granite" comes from the Latin granum, a grain, in reference to the coarse-grained structure of such a holocrystalline rock.
           </p>
-          <div class="span7 popular_products">
-          <ul class="thumbnails list-unstyled">
-            <% @granites.each do |granite| %>
-              <li class="col-md-6">
-                <div class="thumbnail">
-                  <span><%= image_tag granite.granite_pics.to_s, :width=>210,:height=>210 %></span>
-                  <div class="productPicBoxText fonter" >
-                    <span><%= granite.name %></span>
-                    <% if granite.price.present? %>
-                      <span style="float:right">Price <%= granite.price %></span>
-                    <% end %>
-                  </div>
-                  <% if current_admin %>
-                    <div class="productPicBoxText fonter">
-                      <span><%= link_to 'Edit',edit_granite_path(granite) %> </span>
-                    </div>
-                  <% end %>
-                </div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
       </article>
       <% if current_admin %>
         <%= link_to 'New Granite', new_granite_path %>
@@ -62,7 +40,7 @@
       <div class="col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
+            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
           </div>
             <%= render "layouts/query" %>
         </div>

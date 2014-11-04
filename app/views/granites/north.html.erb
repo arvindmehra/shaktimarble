@@ -4,23 +4,23 @@
       <div class="col-md-8" style="padding-top:15px;">
         <%= render "layouts/side_menu" %>
         <article>
-          <h3>Dharmeta Marble</h3>
+          <h3>North Area Granite</h3>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
-            <% @dharmeta_marbles.each do |dharmeta_marble| %>
+            <% @north_area.each do |north| %>
               <li class="col-md-6">
                 <div class="thumbnail">
-                  <span><%= image_tag dharmeta_marble.kishangarh_marble_pics.to_s, :width=>210,:height=>210 %></span>
+                  <span><%= image_tag north.granite_pics.to_s, :width=>210,:height=>210 %></span>
                   <div class="productPicBoxText fonter" >
-                    <span><%= dharmeta_marble.name %></span>
-                    <% if dharmeta_marble.price.present? %>
-                      <span style="float:right">Price <%= dharmeta_marble.price %></span>
+                    <span><%= north.name %></span>
+                    <% if north.price.present? %>
+                      <span style="float:right">Price <%= north.price %></span>
                     <% end %>
                   </div>
                 </div>
                 <% if current_admin %>
                   <div class="productPicBoxText fonter">
-                    <span><%= link_to 'Edit',edit_kishangarh_marble_path(dharmeta_marble) %> </span>
+                    <span><%= link_to 'Edit',edit_granite_path(north) %> </span>
                   </div>
                 <% end %>
               </li>

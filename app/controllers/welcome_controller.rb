@@ -4,12 +4,17 @@ class WelcomeController <  ApplicationController
     render  :layout => "home_page"
   end
 
+  def contact
+
+  end
+
 
   def send_email
     name = params[:name]
     email = params[:email]
     mobile = params[:mobile]
-    ModelMailer.new_notification(name,email,mobile).deliver
+    description = params[:description]
+    ModelMailer.new_notification(name,email,mobile,description).deliver
   end
 
 end

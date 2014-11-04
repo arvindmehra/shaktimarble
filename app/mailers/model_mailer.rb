@@ -6,10 +6,11 @@ class ModelMailer < ActionMailer::Base
   #
   #   en.model_mailer.new_record_notification.subject
   #
-  def new_notification(name,email,mobile)
+  def new_notification(name,email,mobile,description)
     @name = name
     @email = email
     @mobile = mobile
+    @description = description
     mail to: "bloomberg490@gmail.com, dineshcharkha@gmail.com ", subject: "Query From Shakti Marble"
   end
 end

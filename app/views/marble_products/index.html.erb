@@ -13,6 +13,11 @@
               <% end %>
             </div>
           </div>
+          <% if current_admin %>
+            <div class="productPicBoxText fonter">
+              <span><%= link_to 'Edit',edit_marble_product_path(marble_product) %> </span>
+            </div>
+          <% end %>
         </li>
       <% end %>
     </ul>

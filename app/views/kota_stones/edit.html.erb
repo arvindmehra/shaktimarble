@@ -1,6 +1,5 @@
-<h1>Editing kota_stone</h1>
+<h1>Editing Kota Stone</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @kota_stone %> |
-<%= link_to 'Back', kota_stones_path %>
+<%= link_to 'Destroy', kota_stone_path(params[:id]), method: :delete, data: { confirm: 'Are you sure?' } %>

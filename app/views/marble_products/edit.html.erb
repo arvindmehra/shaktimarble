@@ -1,6 +1,9 @@
-<h1>Editing marble_product</h1>
+<h1>Editing Marble Products</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @marble_product %> |
-<%= link_to 'Back', marble_products_path %>
+<%#= link_to 'Back', makrana_marble_path %> |
+
+
+<%= link_to 'Destroy', marble_product_path(params[:id]), method: :delete, data: { confirm: 'Are you sure?' } %>
+
