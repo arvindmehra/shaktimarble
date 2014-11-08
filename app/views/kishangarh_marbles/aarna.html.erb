@@ -1,10 +1,15 @@
 <div class="col-sm-12">
   <div class="container">
     <div class="row">
-      <div class="col-md-8" style="padding-top:15px;">
+      <div class="col-md-8">
         <%= render "layouts/side_menu" %>
         <article>
+          <div class="para">
           <h3>Aarna Marble</h3>
+            <p>
+              Aarna is a village near by Rajsamand (Rajasthan). Aarna marble has white background and light green lining shade. It can also have light gray and light green lining. White background appears less due to heavy linings. Aarna marble is one of the common marble used in flooring. Clear marble with white background is rare to found.
+            </p>
+          </div>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
             <% @aarna_marbles.each do |aarna_marble| %>
@@ -29,14 +34,7 @@
         </div>
         </article>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>

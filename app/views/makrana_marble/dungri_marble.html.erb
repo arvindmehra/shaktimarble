@@ -1,52 +1,36 @@
 <div class="col-sm-12">
   <div class="container">
     <div class="row">
-      <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <%= image_tag("/bannermarble1.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble2.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble3.png") %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+      <div class="col-md-8">
       	<%= render "layouts/side_menu" %>
         <article>
-        	<h3>Dungri Marble</h3>
-	        <p>
-	          <b>Makrana Dungari Marble</b> is very famous product of makrana city.In Makrana dungari marble the background is white base with black lining. In Makrana Chuk Dungari Marble There are some more white glow with black lining.
-	        </p>
-	        <p>
-	          <b>Makrana Dungri Marble Price/cost </b>:-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
-	        </p>
-	        <p>
-	          <b>Makrana Chuck Dungri Marble</b>  :-In Makrana Chuk Dungari Marble There are some more white glow with black lining.
-	        </p>
-	        <p>
-	          <b>Makrana Chuk Doongri Marble Price </b>:-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
-	        </p>
-	        <p>
-	          <b> Makrana Adanga Tiles </b>:-There are many size in Makrana Dungari Marble/Makrana  Doongri Marble /Makrana Adanga Marble  tiles. Here i defined the size of makrana Adanga marble tiles .Tiles means the length and width of marble is greater than one feet square .In makrana adanga  marble there are nine different sizes such as 24*21 , 24*18 , 24*15 , 24*12 , 18*18 , 15*15 , 12*12 , 18*12 , 18*15 , 21*15 , 21*18 , 15*12 inches .
-	        </p>
-	        <p>
-	          <b>Makrana Adanga Tiles Cost/Price </b>:-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
-	        </p>
-	        <p>
-	          <b>Makrana Variety Marble Cost </b>:-The cost of makrana doongri/Adanga Marble variety is 15-20 rupees per square feet.
-	        </p>
-	        <p>
-	          <b>Makrana Adanga Tiles Cost/Price </b>:-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
-        	</p>
+          <div class="para">
+          	<h3>Dungri Marble</h3>
+  	        <p>
+  	          <span class="underline"> Makrana Dungari Marble</span> is very famous product of makrana city.In Makrana dungari marble the background is white base with black lining. In Makrana Chuk Dungari Marble There are some more white glow with black lining.
+  	        </p>
+  	        <p>
+  	          <span class="underline"> Makrana Dungri Marble Price/cost </span> :-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
+  	        </p>
+  	        <p>
+  	          <span class="underline"> Makrana Chuck Dungri Marble</span>  :-In Makrana Chuk Dungari Marble There are some more white glow with black lining.
+  	        </p>
+  	        <p>
+  	          <span class="underline"> Makrana Chuk Doongri Marble Price </span> :-The approximate cost of Makrana chuck dungari marble is 150-300 rupees per square feet.
+  	        </p>
+  	        <p>
+  	          <span class="underline">  Makrana Adanga Tiles </span> :-There are many size in Makrana Dungari Marble/Makrana  Doongri Marble /Makrana Adanga Marble  tiles. Here i defined the size of makrana Adanga marble tiles .Tiles means the length and width of marble is greater than one feet square .In makrana adanga  marble there are nine different sizes such as 24*21 , 24*18 , 24*15 , 24*12 , 18*18 , 15*15 , 12*12 , 18*12 , 18*15 , 21*15 , 21*18 , 15*12 inches .
+  	        </p>
+  	        <p>
+  	          <span class="underline"> Makrana Adanga Tiles Cost/Price </span> :-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
+  	        </p>
+  	        <p>
+  	          <span class="underline"> Makrana Variety Marble Cost </span> :-The cost of makrana doongri/Adanga Marble variety is 15-20 rupees per square feet.
+  	        </p>
+  	        <p>
+  	          <span class="underline"> Makrana Adanga Tiles Cost/Price </span> :-The cost of makrana doongri/Adanga Marble tiles is 20-50 rupees per square feet.
+          	</p>
+          </div>
         	<div class="span7 popular_products">
 				    <ul class="thumbnails list-unstyled">
 				      <% @dungri_marbles.each do |dungri_marble| %>
@@ -71,14 +55,7 @@
 				  </div>
         </article>
 	    </div>
-		  <div class="col-md-4">
-		    <div class="panel panel-primary">
-			    <div class="panel-heading">
-			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
-			    </div>
-			      <%= render "layouts/query" %>
-			  </div>
-			</div>
+      <%= render 'layouts/query_area' %>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">
 		      <div class="panel-heading">

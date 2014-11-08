@@ -1,38 +1,24 @@
 <div class="col-sm-12">
   <div class="container">
     <div class="row">
-    	<div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <%= image_tag("/bannermarble1.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble2.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble3.png") %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+      <div class="col-md-8">
         <%= render "layouts/side_menu" %>
 	      <article>
-	      	<h3>White Marble</h3>
-	        <p>
-	          <b>First grade white</b> of makrana white marble is very white color marble.And the cost of first grade makrana white marble is 700-2000 per square feet.
-	        </p>
-	        <p>
-	          <b>Second grade makrana </b> white marble is less white than first grade white marble.And the price range of second grade makrana white marble is 400-700 per square feet.
-	        </p>
-	        <p>
-	          <b>Third Grade Makrana</b> White marble is less white than second
-								grade white marble.And the price range of second grade makrana white marble is 150-400 per square feet.
-	        </p>
+          <div class="para">
+  	      	<h3>White Marble</h3>
+  	        <p>
+              White marble is complete white with fine crystal structure . Makrana white marble also known as Makrana sangmarmar or Makrana marble .There are three grades in Makrana White marble.
+            </p>
+            <p>
+  	          <span class="underline">First grade white</span> of makrana white marble is very white color marble.And the cost of first grade makrana white marble is 700-2000 per square feet.
+  	        </p>
+  	        <p>
+  	          <span class="underline">Second grade makrana </span> white marble is less white than first grade white marble.And the price range of second grade makrana white marble is 400-700 per square feet.
+  	        </p>
+  	        <p>
+  	          <span class="underline">Third Grade Makrana</span>  white marble is less white than second grade white marble.And the price range of second grade makrana white marble is 150-400 per square feet.
+  	        </p>
+          </div>
 	        <div class="span7 popular_products">
 				    <ul class="thumbnails list-unstyled">
 				      <% @white_marbles.each do |white_marble| %>
@@ -60,14 +46,7 @@
 	      	<%= link_to 'New Makrana Marble', new_makrana_marble_path %>
 	      <% end %>
     	</div>
-		  <div class="col-md-4">
-		    <div class="panel panel-primary">
-			    <div class="panel-heading">
-			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-			    </div>
-			    <%= render "layouts/query" %>
-		  	</div>
-			</div>
+      <%= render 'layouts/query_area' %>
 		</div>
 	</div>
 </div>

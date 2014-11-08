@@ -1,36 +1,22 @@
 <div class="col-sm-12">
   <div class="container">
     <div class="row">
-      <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <%= image_tag("/bannermarble1.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble2.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble3.png") %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+      <div class="col-md-8">
         <%= render "layouts/side_menu" %>
 	      <article>
-	      	<h3>Kumari Marble</h3>
-	        <p>
-	          <b>Borawar kumari</b>   is chipest makrana marble because it is bluish shading
-						It’s price range is 15~40 Rs / sq. feet
-						Name is borawar kumari because mines of these marble found in borawar a town near to makrana (7 km away from makrana station)
-	 				</p>
-	 				<p>
-	          <b>Mataver kumari </b> is higher grade than borawar kumari this kumari marble has white base and small crystal size than borawar kumari Cost is start from 50~100
-					</p>
+          <div class="para">
+  	      	<h3>Kumari Marble</h3>
+            <p>
+              Makrana Kumari Marble is one part of makrana marble quality.
+              Makrana kumari marble is very(lowest) cheap marble in price base and quality base.There are many range of makrana kumari such as
+            </p>
+  	        <p>
+  	          <span class="underline">Borawar Kumari Marble </span> :- Borawar kumari marble is a name of place named BORAWAR.
+  	 				</p>
+  	 				<p>
+  	          <span class="underline">Makrana Kumari Marble</span> :- Our customers can avail from us excellent quality Sawar Beige Marble Polished. These are appreciated by large number of patterns due to high quality and durability. Owing to their features like low maintenance, longer service life and fine finish, these are available at reasonable prices. These are available in market at most affordable price.
+  					</p>
+          </div>
 					<div class="span7 popular_products">
 				    <ul class="thumbnails list-unstyled">
 				      <% @kumari_marbles.each do |kumari_marble| %>
@@ -55,14 +41,7 @@
 			  </div>
 			</article>
 	    </div>
-		  <div class="col-md-4">
-		    <div class="panel panel-primary">
-			    <div class="panel-heading">
-			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-			    </div>
-			    <%= render "layouts/query" %>
-			  </div>
-			</div>
+      <%= render 'layouts/query_area' %>
 		  <div class="col-md-4">
 		    <div class="panel panel-primary">
 		      <div class="panel-heading">

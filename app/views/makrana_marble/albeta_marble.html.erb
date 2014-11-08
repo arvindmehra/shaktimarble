@@ -1,43 +1,21 @@
 <div class="col-sm-12">
   <div class="container">
     <div class="row">
-    	<div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="item active">
-            <%= image_tag("/bannermarble1.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble2.png") %>
-          </div>
-          <div class="item">
-            <%= image_tag("/bannermarble3.png") %>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+      <div class="col-md-8">
         <%= render "layouts/side_menu" %>
         <article>
-        	<h3>Albeta Marble</h3>
-	        <p>
-	          <b>Makrana albeta Albeta</b>  Marble and fore color with small dark black lining .It is second top quality in makrana marble.
-	        </p>
-	        <p>
-	          <b>Cost of makrana albeta marble </b> :-Makrana white albeta marble price/cost is 150-500.
-	        </p>
-	        <p>
-	          <b>Makrana Brown Albeta</b> In makrana brown Albeta  marble the background color is brown based and fore color with small dark black lining .It is second top quality in makrana marble.
-	        </p>
-	        <p>
-	          <b>Price of makrana brown albeta marble </b>:-Makrana white albeta marble price/cost is 120-300.
-	        </p>
-	        <p>
-	          <b>Makrana Albeta Marble Tiles</b>  :-There are many size in makrana white albeta marble tiles. Here i defined the size of makrana albeta marble tiles .Tiles means the length and width of marble is greater than one feet square
-	        </p>
+          <div class="para">
+          	<h3>Albeta Marble</h3>
+  	        <p>
+  	          <span class="underline">Makrana White Albeta</span> :-  Makrana White Albeta Marble are of small dark black lining .It is second top quality in makrana marble.
+  	        </p>
+  	        <p>
+  	          <span class="underline">Makrana Brown Albeta  </span> :- In makrana brown Albeta  marble the background color is brown based with small dark black lining .It is second top quality in Makrana marble.
+  	        </p>
+  	        <p>
+  	          <span class="underline">Makrana Albeta Marble Tiles </span> :- There are many sizes in makrana white albeta marble tiles.
+  	        </p>
+          </div>
 	        <div class="span7 popular_products">
 			    <ul class="thumbnails list-unstyled">
 			      <% @albeta_marbles.each do |albeta_marble| %>
@@ -62,14 +40,7 @@
 			  </div>
         </article>
 	    </div>
-		  <div class="col-md-4">
-		    <div class="panel panel-primary">
-			    <div class="panel-heading">
-			      <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-			    </div>
-			    <%= render "layouts/query" %>
-			  </div>
-			</div>
+      <%= render 'layouts/query_area' %>
 		</div>
 	</div>
 </div>

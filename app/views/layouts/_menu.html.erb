@@ -1,0 +1,39 @@
+<ul id="menu">
+  <li>
+      <%= link_to("Makrana Marble",makrana_marble_index_path) %>
+      <ul>
+        <li><%= link_to("White Marble",white_marble_makrana_marble_index_path) %></li>
+        <li><%= link_to("Albeta Marble",albeta_marble_makrana_marble_index_path) %></li>
+        <li><%= link_to("Dungri Marble",dungri_marble_makrana_marble_index_path) %></li>
+        <li><%= link_to("Kumari Marble",kumari_makrana_marble_index_path) %></li>
+      </ul>
+  </li>
+  <li>
+    <%= link_to("Granite",granites_path,:class=>"active") %>
+    <ul>
+      <li><%= link_to("North Area",north_granites_path) %></li>
+      <li><%= link_to("South Area",south_granites_path) %></li>
+    </ul>
+  </li>
+  <li>
+    <%= link_to("Kishangarh",kishangarh_marbles_path)  %>
+    <ul>
+      <li><%= link_to("Morwad Marble", morwad_marble_kishangarh_marbles_path)  %></li>
+      <li><%= link_to("Toronto", toronto_kishangarh_marbles_path)  %></li>
+      <li><%= link_to("Aarna", aarna_kishangarh_marbles_path)  %></li>
+      <li><%= link_to("Dharmeta",dharmeta_kishangarh_marbles_path)  %></li>
+      <li><%= link_to("Katni",katni_kishangarh_marbles_path)  %></li>
+      <li><%= link_to("Sawar Marble",sawar_marble_kishangarh_marbles_path)  %></li>
+      <li><%= link_to("Pink Marble",pink_marble_kishangarh_marbles_path)  %></li>
+    </ul>
+  </li>
+  <li><%= link_to("Kota Stone", kota_stones_path)%></li>
+  <li>
+    <%= link_to("Products", marble_products_path) %>
+    <ul>
+      <li><a href="#">Flooring and Design</a></li>
+      <li><a href="#">Statue</a></li>
+      <li><a href="#">Temple</a></li>
+    </ul>
+  </li>
+</ul>

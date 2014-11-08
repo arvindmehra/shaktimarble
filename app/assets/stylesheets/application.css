@@ -10,17 +10,19 @@
  *
  *= require bootstrap
  *= require_self
+ *= menu
  */
 
 
 @import "bootstrap";
+@import "menu";
 
 body {
-	font-size: 14px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+  font-family: "Droid Sans",Helvetica,Arial,sans-serif;
   color: #222;
   background-color: #F4F4F4;
- background-image: url(/or_bg.jpg);
- background-repeat: repeat-x;
+  color: #3c3c3c;
 }
 
 
@@ -48,8 +50,15 @@ margin: 14px 0px;
 .header {
   border-top: 5px solid #81342A;
   background-color: #F4F4F4;
-  padding-bottom: 20px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #81342A;
 }
+
+.header .line {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #81342A;
+}
+
 .header a {
   color: #fff;
 }
@@ -59,7 +68,6 @@ margin: 14px 0px;
 {
 float:right;
 padding:5px;
-text-transform:uppercase;
 font-size:12px;
 font-weight:200;
 color:#fff;
@@ -83,7 +91,7 @@ float:left;
 padding:0 10px ;
 }
 
-.carousel-inner {
+/*.carousel-inner {
 border-top-left-radius:50px;
 -webkit-border-top-left-radius:50px;
 -moz-border-top-left-radius:50px;
@@ -96,7 +104,7 @@ border-bottom-left-radius:50px;
 border-bottom-right-radius:50px;
 -webkit-border-bottom-right-radius:50px;
 -moz-border-bottom-right-radius:50px;
-}
+}*/
 
 
 .home a
@@ -251,7 +259,7 @@ margin-left: 15px;
 
 .para {
 background: #4587a1;
-padding: 50px 10px 10px 15px;
+padding: 10px 10px 10px 15px;
 color: white;
 letter-spacing: .1em;
 }
@@ -281,21 +289,20 @@ letter-spacing: .2em;
   font-size: 16px;
 }
 
-.list-group-item-white {
-  background-color: #fff;
+.special_menu {
+  padding-bottom: 20px;
+  padding-right: 2px;
 }
 
+.display_block {
+  display: block;
+}
+.display_none {
+  display: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.underline {
+  text-decoration: underline;
+  font-weight: bold;
+}
 

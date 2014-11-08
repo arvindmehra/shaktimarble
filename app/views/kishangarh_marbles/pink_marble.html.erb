@@ -4,7 +4,12 @@
       <div class="col-md-8" style="padding-top:15px;">
         <%= render "layouts/side_menu" %>
         <article>
-          <h3>Pink Marble</h3>
+          <div class="para">
+            <h3>Pink Marble</h3>
+            <p>
+              Pink Marble Stones have fine finishing, smooth surface and appealing looks. these Pink Marble Stones are high on demand in the global markets.  Pink Marble Stone can be used for floors, walls, and borders. Largely known for excellent finishing, smooth surface and durability, our Pink Marble Stone is surely the best choice to vouch for interior decoration.
+            </p>
+          </div>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
             <% @pink_marbles.each do |pink_marble| %>
@@ -29,14 +34,7 @@
         </div>
         </article>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>
