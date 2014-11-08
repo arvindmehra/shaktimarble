@@ -1,6 +1,6 @@
 <div class="col-sm-12">
   <div class="container">
-      <div class="row">
+    <div class="row">
       <div id="carousel-example-generic"  class="carousel slide" data-ride="carousel" style="width:1140px; margin-bottom:20px;">
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -19,25 +19,21 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
+      <div class="col-md-8" class="top_line">
          <%= render "layouts/side_menu" %>
           <article class="para">
             <h4>Makrana Marble</h4>
-            The best quality of marble in world
-            The oldest and the best quality marble in the world. It not need chemical reinforcement like italian marble, no pin holes, no color change and no loss of polish. This is practically verified by the buildings and numerous temples, mosques, churches and m0onuments in india for over 1000 year now. Thus life of next seven genration is guarantied. This marble is also knows as milky white marble.
+            Makrana Marble is one of the most well liked and chosen construction material rock which is employed on a extremely wide scale , around the world.
+            <br>
+             It needs no chemical reinforcement like Italian marble, no pin holes, no colour change and loss of polish. This is practically verified by the buildings  and numerous temples, mosques , churches and monuments in India. Thus, a life of next seven generation is guarantied also know as milky white marble.
+            <br>
+              Makrana marble are classified according to their crystal size in marble.
           </article>
           <% if current_admin %>
               <%= link_to 'New Makrana Marble', new_makrana_marble_path %>
           <% end %>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>

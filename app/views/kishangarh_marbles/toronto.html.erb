@@ -4,7 +4,12 @@
       <div class="col-md-8" style="padding-top:15px;">
         <%= render "layouts/side_menu" %>
         <article>
-          <h3>Toronto Marble</h3>
+          <div class="para">
+            <h3>Toronto Marble</h3>
+            <p>
+              Toronto Marble is one of the perfect choice for Interiors as well as for Exteriors. There is a vast demand of Toronto Marble in Indian and International Market. Toronto Marble is one of the qualitative and available in standard sizes and thickness in competative prices. Toronto Marble can also be available as per the costumize order of Indian and International clients. One can get Toronto Marble in shape of natural blocks, processed slabs & tiles and also in beautiful border lining.
+            </p>
+          </div>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
             <% @toronto_marbles.each do |toronto_marble| %>
@@ -29,14 +34,7 @@
         </div>
         </article>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>

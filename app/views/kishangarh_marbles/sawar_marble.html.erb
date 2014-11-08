@@ -4,7 +4,15 @@
       <div class="col-md-8" style="padding-top:15px;">
         <%= render "layouts/side_menu" %>
         <article>
-          <h3>Sawar Marble</h3>
+          <div class="para">
+            <h3>Sawar Marble</h3>
+            <p>
+              <span class="underline">Designer Sawar Marble </span> :- Our clients can avail from us Designer Sawar Marble. These are made of superior quality of raw material which ensure durability at its user end. These are available in market at most affordable prices.
+            </p>
+            <p>
+              <span class="underline">Sawar Beige Marble </span> :- Makrana kumari marble mines are in makrana city.The cost of borawar kumari marble ‘s starting price of slab is Rs 35 per square feet.
+            </p>
+          </div>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
             <% @sawar_marbles.each do |sawar_marble| %>
@@ -29,14 +37,7 @@
         </div>
         </article>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>

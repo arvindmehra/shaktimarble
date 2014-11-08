@@ -4,7 +4,12 @@
       <div class="col-md-8" style="padding-top:15px;">
         <%= render "layouts/side_menu" %>
         <article>
-          <h3>Dharmeta Marble</h3>
+          <div class="para">
+            <h3>Dharmeta Marble</h3>
+            <p>
+              Dharmeta Marble is one of the oldest and finest quality produced in Dharmeta (a village), Rajasthan. It has milky white tone with green or brown shades with figurative patterns or designs on the surface. Dharmeta Marble is one of the most sought after qualitative product available in best competitive prices having abundant utility in residential & commercial purposes as a durable marble.
+            </p>
+          </div>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
             <% @dharmeta_marbles.each do |dharmeta_marble| %>
@@ -29,14 +34,7 @@
         </div>
         </article>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>

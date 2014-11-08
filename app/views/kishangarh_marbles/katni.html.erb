@@ -4,7 +4,12 @@
       <div class="col-md-8" style="padding-top:15px;">
         <%= render "layouts/side_menu" %>
         <article>
-          <h3>Katni Marble</h3>
+          <div class="para">
+            <h3>Katni Marble</h3>
+            <p>
+              It comes in Beige, light green, purple colors. Unlike white marble or Italian marbles; it has very broad strips patterns. This makes possible the diamonds patterns, zig-zag pattern and straight lines patterns.  Actually katni is the name of village.Marble produced in the village is known as Katni marble. Starting prize range of this marble quality is 13 Rs. per sq. feet up to 85 Rs. per sq. feet of katni marble tiles. basic size available in this range are 24*9, 21*9, 18*9, 15*9. 12*9, 24*6,21*6, 18*6, 15*6, 12*6 .
+            </p>
+          </div>
           <div class="span7 popular_products">
           <ul class="thumbnails list-unstyled">
             <% @katni_marbles.each do |katni_marble| %>
@@ -29,14 +34,7 @@
         </div>
         </article>
       </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the us</h3>
-          </div>
-          <%= render "layouts/query" %>
-        </div>
-      </div>
+      <%= render 'layouts/query_area' %>
     </div>
   </div>
 </div>
