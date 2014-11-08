@@ -78,7 +78,7 @@
     text-transform: none;
 }
 
-*html #menu ul a { /* IE6 */
+#menu ul a { /* IE6 */
     height: 10px;
     width: 150px;
 }
