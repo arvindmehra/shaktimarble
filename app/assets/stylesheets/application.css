@@ -10,11 +10,11 @@
  *
  *= require bootstrap
  *= require_self
+ *= require menu
  */
 
 
 @import "bootstrap";
-@import "menu";
 
 body {
 	font-size: 14px;
