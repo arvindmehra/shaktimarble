@@ -1,27 +1,109 @@
-<div id="letter-container" class="letter-container">
-  <div class="col-md-6">
-    <h2>
-      <%= link_to("Makrana Marble",makrana_marble_index_path) %>
-    </h2>
-  </div>
-  <div class="col-md-6">
-    <h2>
-      <%= link_to("Kishangarh Marble", kishangarh_marbles_path) %>
-    </h2>
-  </div>
-  <div class="col-md-12">
-    <h2>
-      <%= image_tag('/logoshakti.png',alt: "Shakti Marble") %>
-    </h2>
-  </div>
-  <div class="col-md-6">
-    <h2>
-      <%= link_to("Granite",granites_path) %>
-    </h2>
-  </div>
-  <div class="col-md-6">
-    <h2>
-      <%= link_to("Marble Products",marble_products_path) %>
-    </h2>
-  </div>
-</div>
+<header class="cd-header">
+    <div id="cd-logo"><%= link_to image_tag('/logoshakti.png',alt: "Shakti Marble",width: '200', height: '36'), root_path %></div>
+
+    <nav class="cd-main-nav">
+      <ul>
+        <!-- inser more links here -->
+        <li><a href="#home">Home</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav> <!-- cd-main-nav -->
+  </header>
+
+  <a name="home"></a>
+  <main class="cd-main-content">
+    <div class="cd-fixed-bg cd-bg-1">
+      <h1>We Don't Sell Stones We Sell Satisfaction </h1>
+    </div> <!-- cd-fixed-bg -->
+
+    <a name="vision"></a>
+    <div class="cd-scrolling-bg cd-color-2">
+      <div class="cd-container">
+        <div class="cd-fixed-bg cd-bg-1">
+          <h1>Our Vision And Mission </h1>
+        </div>
+        <div class="padder">
+          <p>To have our product in every home by supplying  better quality of marble.</p>
+          <p>To understand the needs and requirements of our customers trends accordingly.</p>
+          <p>To provide wide range and variety of marble available in India with its price tag.
+            Be a highly effective , lean and fast moving company.</p>
+        </div>
+      </div> <!-- cd-container -->
+    </div> <!-- cd-scrolling-bg -->
+
+    <div class="cd-fixed-bg cd-bg-2">
+      <h2>Handpicked Finest Quality Stones.</h2>
+    </div> <!-- cd-fixed-bg -->
+
+    <a name="products"></a>
+    <div class="cd-scrolling-bg cd-color-3">
+      <div class="cd-container">
+        <div class="cd-fixed-bg cd-bg-1">
+          <h1>We Like To Deal In</h1>
+        </div>
+        <div class="padder">
+          <div class="view view-fifth">
+            <%= image_tag('/home-markrana.jpg',alt: "Shakti Marble") %>
+            <div class="mask">
+              <h2>Makrana Marble</h2>
+              <%= link_to("Explore",makrana_marble_index_path, class: "info") %>
+            </div>
+          </div>
+          <div class="view view-fifth">
+            <%= image_tag('/home-granite.jpg',alt: "Shakti Marble") %>
+            <div class="mask">
+              <h2>Granite</h2>
+              <%= link_to("Explore",granites_path, class: "info") %>
+            </div>
+          </div>
+          <div class="view view-fifth">
+              <%= image_tag('/home-kishangarh.jpg',alt: "Shakti Marble") %>
+              <div class="mask">
+                  <h2>Kishangarh Marble</h2>
+                  <%= link_to("Explore",kishangarh_marbles_path, class: "info")  %>
+              </div>
+          </div>
+          <div class="view view-fifth">
+              <%= image_tag('/home-products.jpg',alt: "Shakti Marble") %>
+              <div class="mask">
+                  <h2>HandiCraft Products</h2>
+                  <%= link_to("Explore",marble_products_path, class: "info") %>
+              </div>
+          </div>
+        </div>
+      </div> <!-- cd-container -->
+    </div> <!-- cd-scrolling-bg -->
+
+    <a name="about"></a>
+    <div class="cd-fixed-bg cd-bg-3">
+      <h2>
+        <b>About Us</b>
+        <br><br><br>
+        We are famous marble trading firm in Makrana , also known as Charkha marbles.
+        <br><br>
+        Firm was established in 1987 and honoured as a ‘KING OF KUMARI MARBLE’' in 2002.</h2>
+    </div> <!-- cd-fixed-bg -->
+
+    <a name="contact"></a>
+    <div class="cd-scrolling-bg cd-color-1">
+      <div class="cd-container">
+        <div class="cd-fixed-bg cd-bg-1">
+          <h1>We Would Love To Hear From You</h1>
+        </div>
+        <div class="padder">
+          <p>
+            Phone: 9413680420
+            <br><br>
+            Email us:  dineshcharkha@gmail.com
+             <br><br>
+            Address:  Vaishali Nagar
+            <br><br>
+            Site Created By:  Arvind Mehra
+          </p>
+        </div>
+      </div> <!-- cd-container -->
+    </div> <!-- cd-scrolling-bg -->
+  </main> <!-- cd-main-content -->

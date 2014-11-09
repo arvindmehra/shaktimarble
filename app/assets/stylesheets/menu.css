@@ -31,7 +31,7 @@
     color: #fafafa;
 }
 
-*html #menu li a:hover { /* IE6 */
+#menu li a:hover {
     color: #fafafa;
 }
 
@@ -78,7 +78,7 @@
     text-transform: none;
 }
 
-*html #menu ul a { /* IE6 */
+#menu ul a { /* IE6 */
     height: 10px;
     width: 150px;
 }
