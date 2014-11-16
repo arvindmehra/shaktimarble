@@ -1,4 +1,4 @@
-<% if params[:controller] == 'makrana_marble' %>
+<% if params[:controller] == 'makrana_marbles' %>
   <% marbleclass='active' %>
 <% elsif params[:controller] == 'granites' %>
   <% graniteclass='active' %>
@@ -11,14 +11,14 @@
 <% end %>
 
 <div class="panel-group grid" id="accordion">
-  <div class="panel panel-default <%= 'display_none' if params[:controller] != 'makrana_marble' %>">
+  <div class="panel panel-default <%= 'display_none' if params[:controller] != 'makrana_marbles' %>">
     <h4 class="panel-title">
       <ul class="categories">
-        <li><%= link_to "Makrana Marble",makrana_marble_index_path,:class=>"#{marbleclass}" %></li>
-        <li><%= link_to("White Marble",white_marble_makrana_marble_index_path) %></li>
-        <li><%= link_to("Albeta Marble",albeta_marble_makrana_marble_index_path) %></li>
-        <li><%= link_to("Dungri Marble",dungri_marble_makrana_marble_index_path) %></li>
-        <li><%= link_to("Kumari Marble",kumari_makrana_marble_index_path) %></li>
+        <li><%= link_to "Makrana Marble",makrana_marbles_path,:class=>"#{marbleclass}" %></li>
+        <li><%= link_to("White Marble",white_marble_makrana_marbles_path) %></li>
+        <li><%= link_to("Albeta Marble",albeta_marble_makrana_marbles_path) %></li>
+        <li><%= link_to("Dungri Marble",dungri_marble_makrana_marbles_path) %></li>
+        <li><%= link_to("Kumari Marble",kumari_makrana_marbles_path) %></li>
       </ul>
     </h4>
   </div>

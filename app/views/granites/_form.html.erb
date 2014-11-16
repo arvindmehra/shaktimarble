@@ -24,8 +24,12 @@
     <%= f.select :category, Granite::CATEGORY %>
   </div>
   <div class="field">
-    <%= f.label :granite_pics %><br>
+    <%= f.label :normal_image %><br>
     <%= f.file_field :granite_pics %>
+  </div>
+  <div class="field">
+    <%= f.label :zoom_image %><br>
+    <%= f.file_field :zoom_image %>
   </div>
   <div class="actions">
     <%= f.submit %>

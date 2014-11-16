@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104203307) do
+ActiveRecord::Schema.define(version: 20141116165135) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141104203307) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category"
+    t.string   "zoom_image"
   end
 
   create_table "kishangarh_marbles", force: true do |t|
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20141104203307) do
     t.datetime "updated_at"
     t.string   "kishangarh_marble_pics"
     t.string   "category"
+    t.string   "zoom_image"
   end
 
   create_table "kota_stones", force: true do |t|
@@ -55,6 +57,7 @@ ActiveRecord::Schema.define(version: 20141104203307) do
     t.string   "kota_stone_pics"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "zoom_image"
   end
 
   create_table "makrana_marbles", force: true do |t|
@@ -64,6 +67,7 @@ ActiveRecord::Schema.define(version: 20141104203307) do
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "zoom_image"
   end
 
   create_table "marble_products", force: true do |t|
@@ -73,6 +77,7 @@ ActiveRecord::Schema.define(version: 20141104203307) do
     t.string   "product_pics"
     t.string   "name"
     t.integer  "price"
+    t.string   "zoom_image"
   end
 
   create_table "markets", force: true do |t|

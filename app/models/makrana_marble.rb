@@ -1,5 +1,7 @@
 class MakranaMarble < ActiveRecord::Base
   mount_uploader :makrana_marble_pics, MakranaMarblePicsUploader
+  mount_uploader :zoom_image, MakranaMarblePicsUploader
+
   validates_presence_of :name
 
   CATEGORY = ["albeta","dungri","kumari","makrana_kumari","matevari_kumari","white_marble"]

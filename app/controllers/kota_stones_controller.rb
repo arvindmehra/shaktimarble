@@ -69,6 +69,6 @@ class KotaStonesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kota_stone_params
-      params.require(:kota_stone).permit(:name, :price,:kota_stone_pics)
+      params.require(:kota_stone).permit(:name,:price,:kota_stone_pics,:zoom_image)
     end
 end

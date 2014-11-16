@@ -11,7 +11,7 @@
 		  <div class="container">
 		    <div class="row">
 		      <div class="col-md-5" , style = "padding-top:15px;">
-		        <%= link_to image_tag('/logoshakti.png',alt: "Shakti Marble",width: '200', height: '36'), root_path %>
+		        <%= image_tag('/logoshakti.png', class: 'image-link', alt: "Shakti Marble",width: '200', height: '36') %>
 		      </div>
 		      <div class="col-md-6">
 		        <ul class="nav navbar-nav navbar-right homer">
@@ -20,7 +20,7 @@
 		          <li class="dropdown">
 		            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Product <b class="caret"></b></a>
 		            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-		              <li role="presentation"><%= link_to("Makrana Marble",makrana_marble_index_path) %></li>
+		              <li role="presentation"><%= link_to("Makrana Marble",makrana_marbles_path) %></li>
 		              <li role="presentation"><%= link_to("Granite",granites_path) %></li>
 		              <li role="presentation"><%= link_to("Kishangarh Marble",kishangarh_marbles_path)  %></li>
 		              <li role="presentation"><%= link_to "Kota Stone", kota_stones_path %></li>
@@ -69,5 +69,28 @@
 		 		<span class="pull-right"><h6>© 2009-2014 ShaktiMarble. All rights reserved.</h6></span>
 		 	</div>
 		</div>
+
+		<!-- Zoom Magnifier -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.popup-gallery').magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					tLoading: 'Loading image #%curr%...',
+					mainClass: 'mfp-img-mobile',
+					gallery: {
+						enabled: true,
+						navigateByImgClick: true,
+						preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+					},
+					image: {
+						tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+						titleSrc: function(item) {
+							return item.el.attr('title');
+						}
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
