@@ -1,30 +1,106 @@
-<h2>Marble Products</h2>
-
-<div class="span7 popular_products">
-    <ul class="thumbnails list-unstyled">
-      <% @marble_products.each do |marble_product| %>
-        <li class="col-md-2">
-          <div class="thumbnail">
-            <div class="popup-gallery">
-              <span>
-                <%= link_to(image_tag(marble_product.product_pics_url.to_s, :width=>210,:height=>210),marble_product.zoom_image.to_s, title: marble_product.name)  %>
-              </span>
-            </div>
-            <div class="productPicBoxText">
-              <span><%= marble_product.name %></span>
-              <% if marble_product.price.present? %>
-                <span style="float:right">Price <%= marble_product.price %></span><br><br>
+<div role="tabpanel">
+  <!-- Nav tabs -->
+  <ul id="myTab" class="nav nav-tabs">
+    <li class="active"><a href="#statue" data-toggle="tab"><h4>Statue</h4></a></li>
+    <li><a href="#temple" data-toggle="tab"><h4>Temple</h4></a></li>
+    <li><a href="#fad" data-toggle="tab"><h4>Floor & Design</h4></a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="statue">
+      <div class="span7 popular_products">
+        <ul class="thumbnails list-unstyled">
+          <% @marble_products.where(category: "statue").each do |statue| %>
+            <li class="col-md-3">
+              <div class="thumbnail">
+                <div class="popup-gallery">
+                  <span>
+                    <%= link_to(image_tag(statue.product_pics_url.to_s, :width=>210,:height=>210),statue.zoom_image.to_s, title: statue.name)  %>
+                  </span>
+                </div>
+                <div class="productPicBoxText">
+                  <span><%= statue.name %></span>
+                  <% if statue.price.present? %>
+                    <span style="float:right">Price <%= statue.price %></span><br><br>
+                  <% end %>
+                </div>
+              </div>
+              <% if current_admin %>
+                <div class="productPicBoxText fonter">
+                  <span><%= link_to 'Edit',edit_marble_product_path(statue) %> </span>
+                </div>
               <% end %>
-            </div>
-          </div>
-          <% if current_admin %>
-            <div class="productPicBoxText fonter">
-              <span><%= link_to 'Edit',edit_marble_product_path(marble_product) %> </span>
-            </div>
+            </li>
           <% end %>
-        </li>
-      <% end %>
-    </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="temple">
+      <div class="span7 popular_products">
+        <ul class="thumbnails list-unstyled">
+          <% @marble_products.where(category: "temple").each do |temple| %>
+            <li class="col-md-3">
+              <div class="thumbnail">
+                <div class="popup-gallery">
+                  <span>
+                    <%= link_to(image_tag(temple.product_pics_url.to_s, :width=>210,:height=>210),temple.zoom_image.to_s, title: temple.name)  %>
+                  </span>
+                </div>
+                <div class="productPicBoxText">
+                  <span><%= temple.name %></span>
+                  <% if temple.price.present? %>
+                    <span style="float:right">Price <%= temple.price %></span><br><br>
+                  <% end %>
+                </div>
+              </div>
+              <% if current_admin %>
+                <div class="productPicBoxText fonter">
+                  <span><%= link_to 'Edit',edit_marble_product_path(temple) %> </span>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="fad">
+      <div class="span7 popular_products">
+        <ul class="thumbnails list-unstyled">
+          <% @marble_products.where(category: "floor_design").each do |floor_design| %>
+            <li class="col-md-3">
+              <div class="thumbnail">
+                <div class="popup-gallery">
+                  <span>
+                    <%= link_to(image_tag(floor_design.product_pics_url.to_s, :width=>210,:height=>210),floor_design.zoom_image.to_s, title: floor_design.name)  %>
+                  </span>
+                </div>
+                <div class="productPicBoxText">
+                  <span><%= floor_design.name %></span>
+                  <% if floor_design.price.present? %>
+                    <span style="float:right">Price <%= floor_design.price %></span><br><br>
+                  <% end %>
+                </div>
+              </div>
+              <% if current_admin %>
+                <div class="productPicBoxText fonter">
+                  <span><%= link_to 'Edit',edit_marble_product_path(floor_design) %> </span>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 
+</div>
+
 <%= link_to 'New Marble product', new_marble_product_path %>
+
+<script type="text/javascript">
+  $(function () {
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show');
+    });
+  });
+</script>

@@ -43,7 +43,7 @@ class MakranaMarblesController < ApplicationController
 
     respond_to do |format|
       if @makrana_marble.save
-        format.html { redirect_to makrana_marble_url, notice: 'Marble product was successfully created.' }
+        format.html { redirect_to makrana_marbles_url, notice: 'Marble product was successfully created.' }
       else
         format.html { render action: 'new' }
         format.json { render json: @makrana_marble.errors, status: :unprocessable_entity }

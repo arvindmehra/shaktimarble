@@ -20,6 +20,10 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category, MarbleProduct::CATEGORY %>
+  </div>
+  <div class="field">
     <%= f.label :normal_image %><br>
     <%= f.file_field :product_pics %>
   </div>
