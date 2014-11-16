@@ -10,7 +10,11 @@
             <% @south_area.each do |south| %>
               <li class="col-md-6">
                 <div class="thumbnail">
-                  <span><%= image_tag south.granite_pics.to_s, :width=>210,:height=>210 %></span>
+                  <div class="popup-gallery">
+                    <span>
+                      <%= link_to(image_tag(south.granite_pics.to_s, :width=>210,:height=>210),south.zoom_image.to_s, title: south.name) %>
+                    </span>
+                  </div>
                   <div class="productPicBoxText fonter" >
                     <span><%= south.name %></span>
                     <% if south.price.present? %>

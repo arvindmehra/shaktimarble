@@ -20,8 +20,12 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
+    <%= f.label :normal_image %><br>
     <%= f.file_field :product_pics %>
+  </div>
+  <div class="field">
+    <%= f.label :zoom_image %><br>
+    <%= f.file_field :zoom_image %>
   </div>
   <div class="actions">
     <%= f.submit %>

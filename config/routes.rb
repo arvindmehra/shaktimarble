@@ -25,7 +25,7 @@ Marble::Application.routes.draw do
   resources :marble_products
 
   #resources :makrana_marble
-  resources :makrana_marble, :except => [:show] do
+  resources :makrana_marbles do
     collection do
       get :white_marble
       get :albeta_marble

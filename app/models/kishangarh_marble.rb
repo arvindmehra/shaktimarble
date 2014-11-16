@@ -1,6 +1,7 @@
 class KishangarhMarble < ActiveRecord::Base
 
   mount_uploader :kishangarh_marble_pics, KishangarhMarblePicsUploader
+  mount_uploader :zoom_image, KishangarhMarblePicsUploader
   validates_presence_of :name
 
   CATEGORY = ["morwad_marble", "aarna","dharmeta","toronto","katni","sawar_marble","pink_marble"]

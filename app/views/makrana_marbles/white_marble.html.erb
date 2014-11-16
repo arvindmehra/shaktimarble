@@ -24,7 +24,11 @@
 				      <% @white_marbles.each do |white_marble| %>
 				        <li class="col-md-6">
 				          <div class="thumbnail">
-				            <span><%= image_tag white_marble.makrana_marble_pics.to_s, :width=>210,:height=>210 %></span>
+				            <div class="popup-gallery">
+                      <span>
+                        <%= link_to(image_tag(white_marble.makrana_marble_pics.to_s, :width=>210,:height=>210),white_marble.zoom_image.to_s, title: white_marble.name) %>
+                      </span>
+                    </div>
 				            <div class="productPicBoxText fonter" >
 				              <span><%= white_marble.name %></span>
 				              <% if white_marble.price.present? %>

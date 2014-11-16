@@ -3,9 +3,13 @@
 <div class="span7 popular_products">
     <ul class="thumbnails list-unstyled">
       <% @marble_products.each do |marble_product| %>
-        <li class="col-md-5">
+        <li class="col-md-2">
           <div class="thumbnail">
-            <span><%= image_tag marble_product.product_pics_url.to_s, :width=>435,:height=>740 %></span>
+            <div class="popup-gallery">
+              <span>
+                <%= link_to(image_tag(marble_product.product_pics_url.to_s, :width=>210,:height=>210),marble_product.zoom_image.to_s, title: marble_product.name)  %>
+              </span>
+            </div>
             <div class="productPicBoxText">
               <span><%= marble_product.name %></span>
               <% if marble_product.price.present? %>

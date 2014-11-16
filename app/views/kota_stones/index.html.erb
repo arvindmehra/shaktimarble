@@ -34,7 +34,11 @@
             <% @kota_stones.each do |kota_stone| %>
               <li class="col-md-6">
                 <div class="thumbnail">
-                  <span><%= image_tag kota_stone.kota_stone_pics.to_s, :width=>210,:height=>210 %></span>
+                  <div class="popup-gallery">
+                    <span>
+                      <%= link_to(image_tag(kota_stone.kota_stone_pics.to_s, :width=>210,:height=>210),kota_stone.zoom_image.to_s, title: kota_stone.name) %>
+                    </span>
+                  </div>
                   <div class="productPicBoxText fonter" >
                     <span><%= kota_stone.name %></span>
                     <% if kota_stone.price.present? %>

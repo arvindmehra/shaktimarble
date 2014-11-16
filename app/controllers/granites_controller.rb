@@ -76,6 +76,6 @@ class GranitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def granite_params
-      params.require(:granite).permit(:name, :price, :granite_pics,:category)
+      params.require(:granite).permit(:name, :price, :granite_pics,:category,:zoom_image)
     end
 end

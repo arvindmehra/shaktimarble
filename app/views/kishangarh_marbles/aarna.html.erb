@@ -15,7 +15,11 @@
             <% @aarna_marbles.each do |aarna_marble| %>
               <li class="col-md-6">
                 <div class="thumbnail">
-                  <span><%= image_tag aarna_marble.kishangarh_marble_pics.to_s, :width=>210,:height=>210 %></span>
+                  <div class="popup-gallery">
+                      <span>
+                        <%= link_to(image_tag(aarna_marble.kishangarh_marble_pics.to_s, :width=>210,:height=>210),aarna_marble.zoom_image.to_s, title: aarna_marble.name) %>
+                      </span>
+                  </div>
                   <div class="productPicBoxText fonter" >
                     <span><%= aarna_marble.name %></span>
                     <% if aarna_marble.price.present? %>

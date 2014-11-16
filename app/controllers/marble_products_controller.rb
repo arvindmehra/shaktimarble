@@ -68,6 +68,6 @@ class MarbleProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def marble_product_params
-      params.require(:marble_product).permit(:name, :price,:product_pics)
+      params.require(:marble_product).permit(:name,:price,:product_pics,:zoom_image)
     end
 end
