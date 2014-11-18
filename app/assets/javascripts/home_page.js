@@ -1,4 +1,7 @@
-jQuery(document).ready(function($){
+//= require jquery
+//= require jquery_ujs
+
+$(document).ready(function($){
   //open-close submenu on mobile
   $('.cd-main-nav').on('click', function(event){
     if($(event.target).is('.cd-main-nav')) $(this).children('ul').toggleClass('is-visible');
