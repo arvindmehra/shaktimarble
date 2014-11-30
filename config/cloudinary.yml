@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: djwkjyoit
+  api_key: '746394963273583'
+  api_secret: tyJ60HF9deeMTvJsOH71ku4i9uo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: djwkjyoit
+  api_key: '746394963273583'
+  api_secret: tyJ60HF9deeMTvJsOH71ku4i9uo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: djwkjyoit
+  api_key: '746394963273583'
+  api_secret: tyJ60HF9deeMTvJsOH71ku4i9uo
+  enhance_image_tag: true
+  static_image_support: false

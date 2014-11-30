@@ -8,6 +8,7 @@ ruby '2.1.1'
 gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'thin'
 gem 'devise'
 
