@@ -94,7 +94,10 @@
 
 </div>
 
-<%= link_to 'New Marble product', new_marble_product_path %>
+<% if current_admin %>
+  <%= link_to 'New Marble product', new_marble_product_path %>
+<% end %>
+
 
 <script type="text/javascript">
   $(function () {
