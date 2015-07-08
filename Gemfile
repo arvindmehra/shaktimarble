@@ -12,7 +12,7 @@ gem 'cloudinary'
 gem 'thin'
 gem 'devise'
 
-gem 'byebug'
+gem 'sitemap_generator'
 
 #upload files to dropbox
 gem 'carrierwave-dropbox'
