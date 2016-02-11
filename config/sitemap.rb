@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sitemap_generator'
 
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://shaktimarble.com"
+SitemapGenerator::Sitemap.default_host = "https://superwhitemarble.com"
 
 #Dynamic Profile for User
 SitemapGenerator::Sitemap.create do

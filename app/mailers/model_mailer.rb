@@ -11,6 +11,6 @@ class ModelMailer < ActionMailer::Base
     @email = email
     @mobile = mobile
     @description = description
-    mail to: "bloomberg490@gmail.com, dineshcharkha@gmail.com ", subject: "Query From Shakti Marble"
+    mail to: "bloomberg490@gmail.com, dineshcharkha@gmail.com ", subject: "Query From Super White Marble"
   end
 end
